@@ -1,32 +1,33 @@
 local M = {}
 
+local highlights = require "highlights"
+
 M.ui = {
-  theme = "onedark",
+  theme = "rosepine",
+  hl_override = highlights.override,
 }
 
 M.plugins = "plugins"
-
--- M.nvimtree.actions.open_file.quit_on_open = true
 
 M.ui.nvdash = {
     load_on_startup = true,
 
     header = {
-      "           ▄ ▄                   ",
-      "       ▄   ▄▄▄     ▄ ▄▄▄ ▄ ▄     ",
-      "       █ ▄ █▄█ ▄▄▄ █ █▄█ █ █     ",
-      "    ▄▄ █▄█▄▄▄█ █▄█▄█▄▄█▄▄█ █     ",
-      "  ▄ █▄▄█ ▄ ▄▄ ▄█ ▄▄▄▄▄▄▄▄▄▄▄▄▄▄  ",
-      "  █▄▄▄▄ ▄▄▄ █ ▄ ▄▄▄ ▄ ▄▄▄ ▄ ▄ █ ▄",
-      "▄ █ █▄█ █▄█ █ █ █▄█ █ █▄█ ▄▄▄ █ █",
-      "█▄█ ▄ █▄▄█▄▄█ █ ▄▄█ █ ▄ █ █▄█▄█ █",
-      "    █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█ █▄█▄▄▄█    ",
+      "           ",
+      "           ",
+      "           ",
+      "           ",
+      "           ",
+      "  ⟋|､      ",
+      " (°､ ｡ 7   ",
+      " |､  ~ヽ   ",
+      " じしf_,)〳",
     },
 
     buttons = {
-      { "  Bookmarks", "Spc m a", "Telescope marks" },
-      { "  Themes", "Spc t h", "Telescope themes" },
-      { "  Mappings", "Spc c h", "NvCheatsheet" },
+      { "  Projects", "", "Telescope projects" },
+      { "  Themes  ", "", "Telescope themes" },
+      { "  Mappings", "", "NvCheatsheet" },
     },
 }
 
