@@ -1,8 +1,12 @@
 require("nvchad.mappings")
 
--- add yours here
+-- Delete existing keymap
+-- local unmap = vim.keymap.del
+-- unmap("n", "<S-k>")
 
+-- add yours here
 local map = vim.keymap.set
+
 
 -- Insert mode
 map("i", "jk", "<ESC>", { desc = "Escape insert mode" })
@@ -25,6 +29,16 @@ map("n", "d", '"_d', { desc = "Delete whithout remove yank" })
 map("n", "D", '"_D', { desc = "Delete whithout remove yank" })
 map("n", "c", '"_c', { desc = "Replace whithout remove yank" })
 
+map("n", "<S-Up>", '<cmd>lua MiniMove.move_line("up")<cr>', { desc = "Move line up" })
+map("n", "<S-Down>", '<cmd>lua MiniMove.move_line("down")<cr>', { desc = "Move line down" })
+map("n", "<S-k>", '<cmd>lua MiniMove.move_line("up")<cr>', { desc = "Move line up" })
+map("n", "<S-j>", '<cmd>lua MiniMove.move_line("down")<cr>', { desc = "Move line " })
+
 -- Select mode
 map("v", "d", '"_d', { desc = "Delete whithout remove yank" })
 map("v", "D", '"_D', { desc = "Delete whithout remove yank" })
+
+map("v", "<S-Up>", '<cmd>lua MiniMove.move_selection("up")<cr>', { desc = "Move selection up" })
+map("v", "<S-Down>", '<cmd>lua MiniMove.move_selection("down")<cr>', { desc = "Move selection down" })
+map("v", "<S-k>", '<cmd>lua MiniMove.move_selection("up")<cr>', { desc = "Move selection up" })
+map("v", "<S-j>", '<cmd>lua MiniMove.move_selection("down")<cr>', { desc = "Move selection down" })
