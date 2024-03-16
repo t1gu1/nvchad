@@ -44,11 +44,18 @@ map({ "n" }, "<leader>t", function()
 	require("nvchad.term").toggle({ pos = "float", id = lastTermIdUsed })
 end, { desc = "Terminal Toggle Floating term" })
 
-for idNumber = 1, 5 do
-	map({ "n" }, idNumber .. "<leader>t", function()
-		require("nvchad.term").toggle({ pos = "float", id = idNumber })
-		lastTermIdUsed = idNumber
+for id = 1, 9 do
+	map({ "n" }, id .. "<leader>t", function()
+		require("nvchad.term").toggle({ pos = "float", id = id })
+		lastTermIdUsed = id
 	end, { desc = "Terminal Toggle Floating term" })
+end
+
+-- Harpoon
+for num = 1, 9 do
+	map({ "n" }, "<leader>" .. num, function()
+		require("harpoon"):list():select(num)
+	end, { desc = "Switch to Harppoon index" .. num })
 end
 
 -- Select mode
