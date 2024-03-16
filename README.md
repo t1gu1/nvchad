@@ -23,11 +23,11 @@
 
 <img width="1560" alt="image" src="https://github.com/t1gu1/nvchad/assets/12479055/bd951f95-04ec-46f6-b197-248544c12e27">
 
-## Terminal is simple and keep the theme hilights
+## Terminal is simple and keep the theme hilights (NvChad.term)
 
 <img width="1029" alt="image" src="https://github.com/t1gu1/nvchad/assets/12479055/14300c6c-51e7-48a7-9dd8-0f6a1a36f105">
 
-## Nice way to access the terminal (Custom)
+## Nice way to access the terminal (Custom NvChad.term mapping)
 
 ### Simply use these shorcuts:
 
