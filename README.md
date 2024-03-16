@@ -59,3 +59,10 @@ Shortcut: Simply `t`
 - You get it. It works from `1` to `9`.
 
 <img width="1611" alt="image" src="https://github.com/t1gu1/nvchad/assets/12479055/29fbd5df-d618-47bb-83ab-9a6f392140c3">
+
+## Cheat Sheet
+
+`<leader>ch` Will open the Cheat Sheet
+
+<img width="1712" alt="image" src="https://github.com/t1gu1/nvchad/assets/12479055/366d6f37-ecf3-4a16-9c92-19526002fae8">
+
