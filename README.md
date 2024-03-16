@@ -11,12 +11,12 @@
 
 ### Nice little plugins (Cause not mentionned later in this doc)
 
-- **rainbow-delimiters**  | Make a rainbow with () {} [] - Easier to see the bloc
-- **mini.cursorword**     | Underline all words similar to the one under the cursor
-- **mini.surround **      | Sourround content with () {} [] "" ''
-- **mini.move**           | Move line or selection
-- **lspsaga**             | Nice Lsp action, debug, etc bubble
-- **project.nvim**        | Added to NvDash quick find project
+- `rainbow-delimiters`  | Make a rainbow with () {} [] - Easier to see the bloc
+- `mini.cursorword`     | Underline all words similar to the one under the cursor
+- `mini.surround`       | Sourround content with () {} [] "" ''
+- `mini.move`           | Move line or selection
+- `lspsaga`             | Nice Lsp action, debug, etc bubble
+- `project.nvim`        | Added to NvDash quick find project
 
 ## Cute Dashboard (Customised)
 
