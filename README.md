@@ -60,7 +60,7 @@ Shortcut: Simply `t`
 
 <img width="1611" alt="image" src="https://github.com/t1gu1/nvchad/assets/12479055/29fbd5df-d618-47bb-83ab-9a6f392140c3">
 
-## Cheat Sheet
+## Cheat Sheet - The BLAZINGLY FAST way to learn about this config shorcuts
 
 `<leader>ch` Will open the Cheat Sheet
 
