@@ -13,7 +13,7 @@
 - html
 - css
 
-## Install Pre-requisites
+### Install Pre-requisites
 
 - [Install Nvim 0.9.5](https://neovim.io/)
 - `git clone https://github.com/t1gu1/nvchad ~/.config/nvim && nvim`
