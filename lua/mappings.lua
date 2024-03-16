@@ -35,13 +35,18 @@ map("n", "<S-j>", '<cmd>lua MiniMove.move_line("down")<cr>', { desc = "Move line
 
 map({ "n" }, "t", "<cmd>Telescope terms<CR>", { desc = "Terminal Toggle Floating term" })
 
+local lastTermIdUsed = 1
+
 map({ "n" }, "<leader>t", function()
-	require("nvchad.term").toggle({ pos = "float" })
+	require("nvchad.term").toggle({ pos = "float", id = lastTermIdUsed })
 end, { desc = "Terminal Toggle Floating term" })
 
-map({ "n" }, "<leader>T", function()
-	require("nvchad.term").new({ pos = "float", id = math.random(1, 100000) })
-end, { desc = "Terminal Toggle Floating term" })
+for idNumber = 1, 5 do
+	map({ "n" }, idNumber .. "<leader>t", function()
+		require("nvchad.term").toggle({ pos = "float", id = idNumber })
+		lastTermIdUsed = idNumber
+	end, { desc = "Terminal Toggle Floating term" })
+end
 
 -- Select mode
 map("v", "d", '"_d', { desc = "Delete whithout remove yank" })
