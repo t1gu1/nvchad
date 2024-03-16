@@ -127,4 +127,29 @@ return {
 			require("mini.move").setup()
 		end,
 	},
+	{
+		"neovim/nvim-lspconfig",
+		dependencies = {
+			"ray-x/lsp_signature.nvim",
+			opts = {
+				hint_enable = true, -- disable hints as it will crash in some terminal
+			},
+		},
+	},
+	-- Override plugin definition options
+	{
+		"neovim/nvim-lspconfig",
+		config = function()
+			require("nvchad.configs.lspconfig")
+			require("configs.lspconfig")
+		end, -- Override to setup mason-lspconfig
+	},
+	-- Better code action UI
+	{
+		"nvimdev/lspsaga.nvim",
+		event = "LspAttach",
+		config = function()
+			require("lspsaga").setup({})
+		end,
+	},
 }
