@@ -24,7 +24,7 @@ return {
 					width = width,
 					height = height,
 					row = (gheight - height) * 0.4,
-					col = (gwidth - width) * 0.5,
+					col = (gwidth - width) * 0.95,
 					border = "rounded",
 				},
 			}
