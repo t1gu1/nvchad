@@ -13,6 +13,8 @@ map("n", "<leader>fm", function()
 	require("conform").format()
 end, { desc = "File Format with conform" })
 
+map("n", "<ESC>", "<cmd>q<cr>", { desc = "Close buffer" })
+
 map("n", "<c-s>", '<cmd>lua require("conform").format()<CR>:w<CR>', { desc = "File Format with conform" })
 map("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", { desc = "Toggle NvimTree" })
 

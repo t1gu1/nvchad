@@ -1,4 +1,3 @@
-local nvim_tree = require("nvim-tree")
 local gwidth = vim.api.nvim_list_uis()[1].width
 local gheight = vim.api.nvim_list_uis()[1].height
 local width = 60

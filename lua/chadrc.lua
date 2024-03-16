@@ -6,14 +6,9 @@ M.ui = {
 	theme = "rosepine",
 	hl_override = highlights.override,
 
-	-- To fit with nvim-tree (treeOffset)
+	-- To fit with nvim-tree
 	tabufline = {
 		order = { "buffers", "tabs", "btns" }, -- Add "treeOffset" if you dont use nvimTreee like a popup
-		modules = {
-			abc = function()
-				return ""
-			end,
-		},
 	},
 }
 
