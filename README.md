@@ -32,8 +32,11 @@
 ### Simply use these shorcuts:
 
 - `<leader>t` Open the last opened terminal (Create one if none created)
+- `1<leader>t` Open the second terminal (Create one if none created)
 - `2<leader>t` Open the second terminal (Create one if none created)
-- Etc
+- `3<leader>t` Open the second terminal (Create one if none created)
+- `4<leader>t` Open the second terminal (Create one if none created)
+- `5<leader>t` Open the second terminal (Create one if none created)
 
 ### An other way to switch or simply view opened terminal
 
