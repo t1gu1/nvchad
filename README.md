@@ -6,6 +6,8 @@
 - Astro
 - Markdown
 - Lua
+- html
+- css
 
 ## Cute Dashboard (Customised)
 
