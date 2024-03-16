@@ -13,6 +13,16 @@
 - html
 - css
 
+## Install Pre-requisites
+
+- [Install Nvim 0.9.5](https://neovim.io/)
+- `git clone https://github.com/t1gu1/nvchad ~/.config/nvim && nvim`
+- [Nerd Font](https://www.nerdfonts.com/) as your terminal font. Make sure the nerd font you set doesn't end with Mono to prevent small icons. Example : JetbrainsMono Nerd Font and not JetbrainsMono Nerd Font Mono
+- Ripgrep is required for grep searching with Telescope (OPTIONAL).
+- GCC, Windows users must have mingw installed and set on path.
+- Make, Windows users must have GnuWin32 installed and set on path.
+- When you open the first time, always check your setup with the `:checkhealth` command
+
 ### Nice little plugins added (Cause not mentionned later in this doc)
 
 - `rainbow-delimiters`  | Make a rainbow with () {} [] - Easier to see the bloc
