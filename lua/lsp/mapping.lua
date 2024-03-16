@@ -1,5 +1,5 @@
 return function(mappings)
-  mappings.n["K"] = false
+	mappings.n["k"] = false
 
-  return mappings
+	return mappings
 end

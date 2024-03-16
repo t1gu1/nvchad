@@ -5,11 +5,57 @@ return {
 			require("configs.conform")
 		end,
 	},
+
+	-- M.nvimtree = {
+	-- 	git = { enable = true },
+	-- 	actions = { open_file = { quit_on_open = true } }, -- NOTE: close when open file
+	-- 	view = {
+	-- 		width = 40,
+	-- 		float = {
+	-- 			enable = true,
+	-- 			quit_on_focus_loss = true,
+	-- 			open_win_config = {
+	-- 				relative = "editor",
+	-- 				border = "rounded",
+	-- 				width = 40,
+	-- 				-- height = 35,
+	-- 				row = 1,
+	-- 				col = 1,
+	-- 			},
+	-- 		},
+	-- 	},
+	-- 	renderer = {
+	-- 		highlight_git = true,
+	-- 		icons = { show = { git = true } },
+	-- 		add_trailing = true,
+	-- 		highlight_diagnostics = true,
+	-- 	},
+	-- 	filters = {
+	-- 		git_ignored = true,
+	-- 		dotfiles = true,
+	-- 		git_clean = false,
+	-- 		no_buffer = false,
+	-- 		custom = {},
+	-- 		exclude = {},
+	-- 	},
+	-- 	sort_by = "case_sensitive",
+	-- }
+
 	{
 		"nvim-tree/nvim-tree.lua",
+		-- config = function()
+		-- 	require("nvim-tree").setup({
+		-- 		view = {
+		-- 			float = {
+		-- 				quit_on_focus_loss = true,
+		-- 			},
+		-- 		},
+		-- 	})
+		-- end,
 		opts = function(_, opts)
 			opts.git.enable = true
 			opts.actions.open_file.quit_on_open = true
+			opts.view.side = "right"
 		end,
 	},
 	{

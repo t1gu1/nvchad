@@ -1,12 +1,12 @@
 require("nvchad.mappings")
 
--- Delete existing keymap
+-- Delete
+-- existing keymap
 -- local unmap = vim.keymap.del
--- unmap("n", "<S-k>")
+-- unmap("n", "<leader-e>")
 
 -- add yours here
 local map = vim.keymap.set
-
 
 -- Insert mode
 map("i", "jk", "<ESC>", { desc = "Escape insert mode" })
@@ -19,8 +19,11 @@ map("n", "<leader>fm", function()
 end, { desc = "File Format with conform" })
 
 map("n", "<c-s>", '<cmd>lua require("conform").format()<CR>:w<CR>', { desc = "File Format with conform" })
+-- map("n", "<leader>e", "<c-n>", { desc = "Toggle NvimTree" })
+-- map("n", "<leader>e", "<nvim-tree-api.node.open>", { desc = "Toggle NvimTree" })
 
 map("n", "<leader>q", ":bdelete<cr>", { desc = "Buffer close" })
+map("n", "<leader>wq", ":q<cr>", { desc = "Quit a window" })
 
 map("n", "p", '"0p', { desc = "paste after" })
 map("n", "P", '"0P', { desc = "paste before" })
