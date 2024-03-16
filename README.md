@@ -40,7 +40,7 @@
 
 ### An other way to switch or simply view opened terminal
 
-Shortcut: `<leader>pt`
+Shortcut: Simply `t`
 
 <img width="1550" alt="image" src="https://github.com/t1gu1/nvchad/assets/12479055/889dc45c-fc48-4346-a5d2-c7c24813a80d">
 
