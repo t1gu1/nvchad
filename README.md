@@ -9,7 +9,7 @@
 - html
 - css
 
-### Nice little plugins (Cause not mentionned later in this doc)
+### Nice little plugins added (Cause not mentionned later in this doc)
 
 - `rainbow-delimiters`  | Make a rainbow with () {} [] - Easier to see the bloc
 - `mini.cursorword`     | Underline all words similar to the one under the cursor
