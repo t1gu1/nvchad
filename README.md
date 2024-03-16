@@ -39,7 +39,15 @@ Shortcut: Simply `t`
 
 <img width="1703" alt="image" src="https://github.com/t1gu1/nvchad/assets/12479055/cd66209a-3347-4f26-a0ee-277689f69a6a">
 
-## Navigate Blazingly fast with Harpoon 2
+## A Noice popup/box for searching and commands
+
+This is what appear when you press `:` or `/`.
+It remove that space at the bottom of the screen for that visual with nice context icons.
+
+<img width="997" alt="image" src="https://github.com/t1gu1/nvchad/assets/12479055/5046ccf0-a3ee-4e3f-a493-7dfa26e57782">
+<img width="997" alt="image" src="https://github.com/t1gu1/nvchad/assets/12479055/201dfb98-4b2f-4a4b-af47-6b11c2283007">
+
+## Navigate Blazingly fast with Harpoon 2 (Added)
 
 - `<leader>a` Add file in Harpoon
 - `<leader>E` Show Harpoon explorer (This is a CAP E)
