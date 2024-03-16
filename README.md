@@ -7,7 +7,7 @@
 - Markdown
 - Lua
 
-## Cute Dashboard
+## Cute Dashboard (Customised)
 
 <img width="1134" alt="image" src="https://github.com/t1gu1/nvchad/assets/12479055/ac0bd860-e3ad-411a-9d36-323b1250cd12">
 
@@ -15,7 +15,7 @@
 
 <img width="721" alt="image" src="https://github.com/t1gu1/nvchad/assets/12479055/d3820bfd-13b0-4449-a90f-6b4d9887e3b0">
 
-## Nice nvim-tree & UI
+## Nice nvim-tree & UI (Customised)
 
 <img width="1703" alt="image" src="https://github.com/t1gu1/nvchad/assets/12479055/cd66209a-3347-4f26-a0ee-277689f69a6a">
 
@@ -27,7 +27,7 @@
 
 <img width="1029" alt="image" src="https://github.com/t1gu1/nvchad/assets/12479055/14300c6c-51e7-48a7-9dd8-0f6a1a36f105">
 
-## Nice way to access the terminal
+## Nice way to access the terminal (Custom)
 
 ### Simply use these shorcuts:
 
