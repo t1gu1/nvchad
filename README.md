@@ -39,6 +39,7 @@
 - `3<leader>t` Open the second terminal (Create one if none created)
 - `4<leader>t` Open the second terminal (Create one if none created)
 - `5<leader>t` Open the second terminal (Create one if none created)
+- You get it. It works from `1` to `9`.
 
 ### An other way to switch or simply view opened terminal
 
@@ -46,4 +47,15 @@ Shortcut: Simply `t`
 
 <img width="1550" alt="image" src="https://github.com/t1gu1/nvchad/assets/12479055/889dc45c-fc48-4346-a5d2-c7c24813a80d">
 
+## Navigate Blazingly fast with Harpoon 2
 
+- `<leader>a` Add file in Harpoon
+- `<leader>E` Show Harpoon explorer (This is a CAP E)
+- `<leader>1` Open the second terminal (Create one if none created)
+- `<leader>2` Open the second terminal (Create one if none created)
+- `<leader>3` Open the second terminal (Create one if none created)
+- `<leader>4` Open the second terminal (Create one if none created)
+- `<leader>5` Open the second terminal (Create one if none created)
+- You get it. It works from `1` to `9`.
+
+<img width="1611" alt="image" src="https://github.com/t1gu1/nvchad/assets/12479055/29fbd5df-d618-47bb-83ab-9a6f392140c3">
