@@ -136,7 +136,20 @@ return {
 			},
 		},
 	},
+
 	-- Override plugin definition options
+	{
+		"nvim-treesitter/nvim-treesitter",
+		opts = require("configs.treesitter"),
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter-textobjects",
+			"windwp/nvim-ts-autotag",
+		},
+	},
+	{
+		"williamboman/mason.nvim",
+		opts = require("configs.mason"),
+	},
 	{
 		"neovim/nvim-lspconfig",
 		config = function()

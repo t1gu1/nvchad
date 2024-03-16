@@ -14,12 +14,10 @@ map("n", "<leader>fm", function()
 end, { desc = "File Format with conform" })
 
 map("n", "<ESC>", "<cmd>q<cr>", { desc = "Close buffer" })
+map("n", "<leader>q", ":bdelete<cr>", { desc = "Buffer close" })
 
 map("n", "<c-s>", '<cmd>lua require("conform").format()<CR>:w<CR>', { desc = "File Format with conform" })
 map("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", { desc = "Toggle NvimTree" })
-
-map("n", "<leader>q", ":bdelete<cr>", { desc = "Buffer close" })
-map("n", "<leader>wq", ":q<cr>", { desc = "Quit a window" })
 
 map("n", "p", '"0p', { desc = "paste after" })
 map("n", "P", '"0P', { desc = "paste before" })
@@ -34,6 +32,8 @@ map("n", "<S-k>", '<cmd>lua MiniMove.move_line("up")<cr>', { desc = "Move line u
 map("n", "<S-j>", '<cmd>lua MiniMove.move_line("down")<cr>', { desc = "Move line " })
 
 map({ "n", "v" }, "<leader>la", "<cmd>Lspsaga code_action<CR>", { desc = "Lsp Code action" })
+map({ "n", "v" }, "<leader>lh", "<cmd>Lspsaga hover_doc<CR>", { desc = "Lsp Documentation" })
+map({ "n", "v" }, "<leader>ld", "<cmd>Lspsaga show_cursor_diagnostics<CR>", { desc = "Lsp cursor diagnostics" })
 -- map({ "n", "v" }, "<leader>la", vim.lsp.buf.code_action, { desc = "Lsp Code action" })
 
 map({ "n" }, "t", "<cmd>Telescope terms<CR>", { desc = "Terminal Toggle Floating term" })

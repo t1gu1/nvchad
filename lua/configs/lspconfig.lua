@@ -5,7 +5,7 @@ local on_init = configs.on_init
 local capabilities = configs.capabilities
 
 local lspconfig = require("lspconfig")
-local servers = { "html", "cssls", "tsserver", "lua-language-server" }
+local servers = { "html", "cssls", "tsserver", "lua_ls", "astro" }
 
 for _, lsp in ipairs(servers) do
 	lspconfig[lsp].setup({

@@ -1,6 +1,9 @@
 local options = {
+	auto_install = true,
+
 	ensure_installed = {
 		"lua-language-server",
+		"astro-language-server",
 		"stylua",
 		"eslint_d",
 		"jsonlint",
