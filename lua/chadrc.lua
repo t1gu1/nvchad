@@ -8,7 +8,7 @@ M.ui = {
 
 	-- To fit with nvim-tree (treeOffset)
 	tabufline = {
-		order = { "buffers", "tabs", "btns", "treeOffset" },
+		order = { "buffers", "tabs", "btns" }, -- Add "treeOffset" if you dont use nvimTreee like a popup
 		modules = {
 			abc = function()
 				return ""

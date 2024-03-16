@@ -39,6 +39,3 @@ require("nvchad.autocmds")
 vim.schedule(function()
 	require("mappings")
 end)
-
--- Key mapping to toggle nvim-tree
--- vim.api.nvim_set_keymap("n", "<leader>E", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
