@@ -23,4 +23,22 @@
 
 <img width="1560" alt="image" src="https://github.com/t1gu1/nvchad/assets/12479055/bd951f95-04ec-46f6-b197-248544c12e27">
 
+## Terminal is simple and keep the theme hilights
+
+<img width="1029" alt="image" src="https://github.com/t1gu1/nvchad/assets/12479055/14300c6c-51e7-48a7-9dd8-0f6a1a36f105">
+
+## Nice way to access the terminal
+
+### Simply use these shorcuts:
+
+- `<leader>t` Open the last opened terminal (Create one if none created)
+- `2<leader>t` Open the second terminal (Create one if none created)
+- Etc
+
+### An other way to switch or simply view opened terminal
+
+Shortcut: `<leader>pt`
+
+<img width="1550" alt="image" src="https://github.com/t1gu1/nvchad/assets/12479055/889dc45c-fc48-4346-a5d2-c7c24813a80d">
+
 
