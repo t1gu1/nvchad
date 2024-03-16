@@ -64,5 +64,5 @@ Shortcut: Simply `t`
 
 `<leader>ch` Will open the Cheat Sheet
 
-<img width="1712" alt="image" src="https://github.com/t1gu1/nvchad/assets/12479055/366d6f37-ecf3-4a16-9c92-19526002fae8">
+<img width="1627" alt="image" src="https://github.com/t1gu1/nvchad/assets/12479055/18156a1c-2b61-42ae-882f-170bd8f7c40b">
 
