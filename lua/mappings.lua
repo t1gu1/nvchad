@@ -19,8 +19,8 @@ map("n", "<leader>q", ":bdelete<cr>", { desc = "Buffer close" })
 map("n", "<c-s>", '<cmd>lua require("conform").format()<CR>:w<CR>', { desc = "File Format with conform" })
 map("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", { desc = "Toggle NvimTree" })
 
-map("n", "p", '"0p', { desc = "paste after" })
-map("n", "P", '"0P', { desc = "paste before" })
+map("n", "p", '"0p', { desc = "Paste after" })
+map("n", "P", '"0P', { desc = "Paste before" })
 
 map("n", "d", '"_d', { desc = "Delete whithout remove yank" })
 map("n", "D", '"_D', { desc = "Delete whithout remove yank" })
@@ -36,26 +36,26 @@ map({ "n", "v" }, "<leader>lh", "<cmd>Lspsaga hover_doc<CR>", { desc = "Lsp Docu
 map({ "n", "v" }, "<leader>ld", "<cmd>Lspsaga show_cursor_diagnostics<CR>", { desc = "Lsp cursor diagnostics" })
 -- map({ "n", "v" }, "<leader>la", vim.lsp.buf.code_action, { desc = "Lsp Code action" })
 
-map({ "n" }, "t", "<cmd>Telescope terms<CR>", { desc = "Terminal Toggle Floating term" })
+map({ "n" }, "t", "<cmd>Telescope terms<CR>", { desc = "Terminal List" })
 
 local lastTermIdUsed = 1
 
 map({ "n" }, "<leader>t", function()
 	require("nvchad.term").toggle({ pos = "float", id = lastTermIdUsed })
-end, { desc = "Terminal Toggle Floating term" })
+end, { desc = "Terminal Toggle Floating" })
 
 for id = 1, 9 do
 	map({ "n" }, id .. "<leader>t", function()
 		require("nvchad.term").toggle({ pos = "float", id = id })
 		lastTermIdUsed = id
-	end, { desc = "Terminal Toggle Floating term" })
+	end, { desc = "Terminal Toggle to " .. id })
 end
 
 -- Harpoon
 for num = 1, 9 do
 	map({ "n" }, "<leader>" .. num, function()
 		require("harpoon"):list():select(num)
-	end, { desc = "Switch to Harppoon index" .. num })
+	end, { desc = "Harppoon - Go to " .. num })
 end
 
 -- Select mode
