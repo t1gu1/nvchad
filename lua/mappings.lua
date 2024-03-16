@@ -26,10 +26,10 @@ map("n", "d", '"_d', { desc = "Delete whithout remove yank" })
 map("n", "D", '"_D', { desc = "Delete whithout remove yank" })
 map("n", "c", '"_c', { desc = "Replace whithout remove yank" })
 
-map("n", "<S-Up>", '<cmd>lua MiniMove.move_line("up")<cr>', { desc = "Move line up" })
-map("n", "<S-Down>", '<cmd>lua MiniMove.move_line("down")<cr>', { desc = "Move line down" })
-map("n", "<S-k>", '<cmd>lua MiniMove.move_line("up")<cr>', { desc = "Move line up" })
-map("n", "<S-j>", '<cmd>lua MiniMove.move_line("down")<cr>', { desc = "Move line " })
+map("n", "<S-Up>", '<cmd>lua MiniMove.move_line("up")<cr>', { desc = "Move - line up" })
+map("n", "<S-Down>", '<cmd>lua MiniMove.move_line("down")<cr>', { desc = "Move - line down" })
+map("n", "<S-k>", '<cmd>lua MiniMove.move_line("up")<cr>', { desc = "Move - line up" })
+map("n", "<S-j>", '<cmd>lua MiniMove.move_line("down")<cr>', { desc = "Move - line " })
 
 map({ "n", "v" }, "<leader>la", "<cmd>Lspsaga code_action<CR>", { desc = "Lsp Code action" })
 map({ "n", "v" }, "<leader>lh", "<cmd>Lspsaga hover_doc<CR>", { desc = "Lsp Documentation" })
@@ -55,14 +55,14 @@ end
 for num = 1, 9 do
 	map({ "n" }, "<leader>" .. num, function()
 		require("harpoon"):list():select(num)
-	end, { desc = "Harppoon - Go to " .. num })
+	end, { desc = "Harpoon - Go to " .. num })
 end
 
 -- Select mode
 map("v", "d", '"_d', { desc = "Delete whithout remove yank" })
 map("v", "D", '"_D', { desc = "Delete whithout remove yank" })
 
-map("v", "<S-Up>", '<cmd>lua MiniMove.move_selection("up")<cr>', { desc = "Move selection up" })
-map("v", "<S-Down>", '<cmd>lua MiniMove.move_selection("down")<cr>', { desc = "Move selection down" })
-map("v", "<S-k>", '<cmd>lua MiniMove.move_selection("up")<cr>', { desc = "Move selection up" })
-map("v", "<S-j>", '<cmd>lua MiniMove.move_selection("down")<cr>', { desc = "Move selection down" })
+map("v", "<S-Up>", '<cmd>lua MiniMove.move_selection("up")<cr>', { desc = "Move - selection up" })
+map("v", "<S-Down>", '<cmd>lua MiniMove.move_selection("down")<cr>', { desc = "Move - selection down" })
+map("v", "<S-k>", '<cmd>lua MiniMove.move_selection("up")<cr>', { desc = "Move - selection up" })
+map("v", "<S-j>", '<cmd>lua MiniMove.move_selection("down")<cr>', { desc = "Move - selection down" })

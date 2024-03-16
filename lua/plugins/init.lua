@@ -2,7 +2,6 @@ local gwidth = vim.api.nvim_list_uis()[1].width
 local gheight = vim.api.nvim_list_uis()[1].height
 local width = 60
 local height = 40
-local harpoonPrefix = "<leader><leader>"
 
 return {
 	{
@@ -21,14 +20,14 @@ return {
 				function()
 					require("harpoon"):list():append()
 				end,
-				desc = "Add file",
+				desc = "Harpoon - Add file",
 			},
 			{
 				"<leader>E",
 				function()
 					require("harpoon").ui:toggle_quick_menu(require("harpoon"):list())
 				end,
-				desc = "Toggle quick menu",
+				desc = "Harpoon - Toggle quick menu",
 			},
 			-- Check mappings for that setup: require("harpoon"):list():select(number)
 		},
