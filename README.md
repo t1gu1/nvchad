@@ -9,6 +9,15 @@
 - html
 - css
 
+### Nice little plugins (Cause not mentionned later in this doc)
+
+- rainbow-delimiters  | Make a rainbow with () {} [] - Easier to see the bloc
+- mini.cursorword     | Underline all words similar to the one under the cursor
+- mini.surround       | Sourround content with () {} [] "" ''
+- mini.move           | Move line or selection
+- lspsaga             | Nice Lsp action, debug, etc bubble
+- project.nvim        | Added to NvDash quick find project
+
 ## Cute Dashboard (Customised)
 
 <img width="1134" alt="image" src="https://github.com/t1gu1/nvchad/assets/12479055/ac0bd860-e3ad-411a-9d36-323b1250cd12">
