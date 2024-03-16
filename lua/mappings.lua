@@ -40,7 +40,7 @@ map({ "n" }, "<leader>t", function()
 end, { desc = "Terminal Toggle Floating term" })
 
 map({ "n" }, "<leader>T", function()
-	require("nvchad.term").new({ pos = "float" })
+	require("nvchad.term").new({ pos = "float", id = math.random(1, 100000) })
 end, { desc = "Terminal Toggle Floating term" })
 
 -- Select mode
