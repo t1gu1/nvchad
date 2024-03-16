@@ -1,5 +1,9 @@
 # NvChad Customised
 
+## Cute Dashboard (Customised)
+
+<img width="1134" alt="image" src="https://github.com/t1gu1/nvchad/assets/12479055/ac0bd860-e3ad-411a-9d36-323b1250cd12">
+
 ## Ready to work for these types of projects
 
 - React, Javascript, Typescript
@@ -17,10 +21,6 @@
 - `mini.move`           | Move line or selection
 - `lspsaga`             | Nice Lsp action, debug, etc bubble
 - `project.nvim`        | Added to NvDash quick find project
-
-## Cute Dashboard (Customised)
-
-<img width="1134" alt="image" src="https://github.com/t1gu1/nvchad/assets/12479055/ac0bd860-e3ad-411a-9d36-323b1250cd12">
 
 ## Terminal is simple and keep the theme hilights (NvChad.term)
 
