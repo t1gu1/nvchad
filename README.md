@@ -23,7 +23,9 @@
 - Make, Windows users must have GnuWin32 installed and set on path.
 - When you open the first time, always check your setup with the `:checkhealth` command
 
-### Nice little plugins added (Cause not mentionned later in this doc)
+### Nice little plugins added & ajustment (Cause not mentionned later in this doc)
+
+First there is an ajustement to not replace the yank by using `d`, `c`, `p` so you can copy and paste without the fear of replacing the yarnked buffer.
 
 - `rainbow-delimiters`  | Make a rainbow with () {} [] - Easier to see the bloc
 - `mini.cursorword`     | Underline all words similar to the one under the cursor
