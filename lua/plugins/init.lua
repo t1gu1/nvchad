@@ -22,7 +22,7 @@ return {
 				end,
 				desc = "Harpoon - Add file",
 			},
-			{
+      {
 				"<leader>E",
 				function()
 					require("harpoon").ui:toggle_quick_menu(require("harpoon"):list())
@@ -164,7 +164,23 @@ return {
 			},
 		},
 	},
-
+  {
+    "QuickGD/quickgd.nvim",
+    ft = { "gdshader", "gdshaderinc" },
+    cmd = {
+      "GodotRun",
+      "GodotRunLast",
+      "GodotStart",
+    },
+    init = function()
+      vim.filetype.add {
+        extension = {
+          gdshaderinc = "gdshaderinc",
+        },
+      }
+    end,
+    config = true,
+  },
 	-- Override plugin definition options
 	{
 		"nvim-treesitter/nvim-treesitter",

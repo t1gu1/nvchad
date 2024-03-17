@@ -17,6 +17,12 @@ local options = {
 		"bash",
 		"lua",
 		"astro",
+
+    --Godot
+    "gdscript",
+    "glsl",
+    "godot_resource",
+    --Godot END
 	},
 
 	highlight = {
