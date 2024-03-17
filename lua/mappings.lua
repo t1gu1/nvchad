@@ -19,9 +19,6 @@ map("n", "<leader>q", ":bdelete<cr>", { desc = "Buffer close" })
 map("n", "<c-s>", '<cmd>lua require("conform").format()<CR>:w<CR>', { desc = "File Format with conform" })
 map("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", { desc = "Toggle NvimTree" })
 
-map("n", "p", '"0p', { desc = "Paste after" })
-map("n", "P", '"0P', { desc = "Paste before" })
-
 map("n", "d", '"_d', { desc = "Delete whithout remove yank" })
 map("n", "D", '"_D', { desc = "Delete whithout remove yank" })
 map("n", "c", '"_c', { desc = "Replace whithout remove yank" })
@@ -61,6 +58,8 @@ end
 -- Select mode
 map("v", "d", '"_d', { desc = "Delete whithout remove yank" })
 map("v", "D", '"_D', { desc = "Delete whithout remove yank" })
+map("v", "p", '"_dP', { desc = "Paste after" })
+map("v", "P", '"_dP', { desc = "Paste before" })
 
 map("v", "<S-Up>", '<cmd>lua MiniMove.move_selection("up")<cr>', { desc = "Move - selection up" })
 map("v", "<S-Down>", '<cmd>lua MiniMove.move_selection("down")<cr>', { desc = "Move - selection down" })
