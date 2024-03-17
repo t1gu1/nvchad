@@ -55,11 +55,11 @@ for num = 1, 9 do
 	end, { desc = "Harpoon - Go to " .. num })
 end
 
--- Select mode
-map("v", "d", '"_d', { desc = "Delete whithout remove yank" })
+-- Visual mode
+map("v", "d", '"_d', { desc = "Delete without remove yank" })
 map("v", "D", '"_D', { desc = "Delete whithout remove yank" })
-map("v", "p", '"_dP', { desc = "Paste after" })
-map("v", "P", '"_dP', { desc = "Paste before" })
+map("v", "p", '"_dP', { desc = "Paste without remove yank" })
+map("v", "P", '"_dP', { desc = "Paste without remove yank" })
 
 map("v", "<S-Up>", '<cmd>lua MiniMove.move_selection("up")<cr>', { desc = "Move - selection up" })
 map("v", "<S-Down>", '<cmd>lua MiniMove.move_selection("down")<cr>', { desc = "Move - selection down" })
