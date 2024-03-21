@@ -18,11 +18,11 @@ local options = {
 		"lua",
 		"astro",
 
-    --Godot
-    "gdscript",
-    "glsl",
-    "godot_resource",
-    --Godot END
+		--Godot
+		"gdscript",
+		"glsl",
+		"godot_resource",
+		--Godot END
 	},
 
 	highlight = {
