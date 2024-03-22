@@ -13,6 +13,7 @@ local options = {
 		"luacheck",
 		"stylua",
 		"markdownlint",
+		"tailwindcss-language-server",
 	}, -- not an option from mason.nvim
 
 	PATH = "skip",
