@@ -40,6 +40,12 @@ return {
 		end,
 	},
 	{
+		"razak17/tailwind-fold.nvim",
+		opts = {},
+		dependencies = { "nvim-treesitter/nvim-treesitter" },
+		ft = { "html", "svelte", "astro", "vue", "typescriptreact", "php", "blade" },
+	},
+	{
 		"ThePrimeagen/harpoon",
 		branch = "harpoon2",
 		config = function()
@@ -133,7 +139,7 @@ return {
 	},
 	{
 		"luckasRanarison/tailwind-tools.nvim",
-		event = "VeryLazy",
+		ft = { "html", "svelte", "astro", "vue", "typescriptreact", "php", "blade" },
 	},
 	{
 		"jay-babu/project.nvim",

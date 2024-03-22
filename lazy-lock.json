@@ -36,6 +36,7 @@
   "project.nvim": { "branch": "main", "commit": "4317ce951459a53ba45ffed2495ac6752211364b" },
   "quickgd.nvim": { "branch": "main", "commit": "e78239675071a2fc65bcbcd72b5e7dfb58e553ec" },
   "rainbow-delimiters.nvim": { "branch": "master", "commit": "2200900e3c1aae21dadb65c2ea2e91bcc39ca368" },
+  "tailwind-fold.nvim": { "branch": "main", "commit": "4335dd915073fe3da43a85b06742d12626603973" },
   "tailwind-tools.nvim": { "branch": "master", "commit": "99ff7c8c9cc403c83c7d160a2beb3ad0111044ab" },
   "telescope.nvim": { "branch": "master", "commit": "221778e93bfaa58bce4be4e055ed2edecc26f799" },
   "ui": { "branch": "v2.5", "commit": "717affed7de1b39b51f23d9185b2a48c3264da4b" },

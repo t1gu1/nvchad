@@ -6,7 +6,7 @@ local on_init = configs.on_init
 local capabilities = configs.capabilities
 
 local lspconfig = require("lspconfig")
-local servers = { "html", "cssls", "tsserver", "lua_ls", "astro", "gdscript" }
+local servers = { "html", "cssls", "tsserver", "lua_ls", "astro", "tailwindcss-language-server", "gdscript" }
 
 -- Copy the on_attach function: https://github.com/NvChad/NvChad/blob/v2.5/lua/nvchad/configs/lspconfig.lua
 -- But I simply remove that line: map("n", "K", vim.lsp.buf.hover, opts "Lsp hover information")
