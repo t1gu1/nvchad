@@ -1,28 +1,39 @@
 local options = {
 	ensure_installed = {
+		-- Lua & Vim
 		"lua",
 		"vim",
 		"vimdoc",
+
+		-- JS/TS related
 		"javascript",
 		"typescript",
 		"tsx",
+		"astro",
+
+		-- Generic files
 		"json",
-		"graphql",
+		"regex",
+		"bash",
 		"gitignore",
 		"markdown",
 		"markdown_inline",
+		"dockerfile",
+		"yaml",
+
+		-- Web / App related
+		"graphql",
 		"css",
 		"html",
-		"regex",
-		"bash",
-		"lua",
-		"astro",
+
+		-- Others
+		"hyprlang",
+		"csv",
 
 		--Godot
 		"gdscript",
 		"glsl",
 		"godot_resource",
-		--Godot END
 	},
 
 	highlight = {
