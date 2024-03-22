@@ -133,7 +133,7 @@ return {
 	},
 	{
 		"luckasRanarison/tailwind-tools.nvim",
-		opts = {}, -- your configuration
+		event = "VeryLazy",
 	},
 	{
 		"jay-babu/project.nvim",
