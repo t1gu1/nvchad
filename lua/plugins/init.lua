@@ -5,10 +5,14 @@ local width = 60
 local height = 40
 
 -- Use for Markdown/Headline
-vim.cmd([[highlight Headline1 guibg=#561C24]])
-vim.cmd([[highlight Headline2 guibg=#6D2932]])
+vim.cmd([[highlight Bullet guifg=#000000]])
+vim.cmd([[highlight Headline1 guibg=#d93929 guifg=#ffffff gui=bold]])
+vim.cmd([[highlight Headline2 guibg=#00ffa5 guifg=#000000 gui=bold]])
+vim.cmd([[highlight Headline3 guibg=#00ebd7 guifg=#111111]])
+vim.cmd([[highlight Headline4 guibg=#00d5f2 guifg=#232323 gui=italic]])
 vim.cmd([[highlight CodeBlock guibg=#111111]])
-vim.cmd([[highlight Dash guibg=#333333 gui=bold]])
+vim.cmd([[highlight Dash guibg=#232323 guifg=#222222 gui=bold]])
+vim.cmd([[highlight Quote guifg=#ffffc9]])
 
 return {
 	{
@@ -18,10 +22,19 @@ return {
 		config = function()
 			require("headlines").setup({
 				markdown = {
-					headline_highlights = { "Headline1", "Headline2", "CodeBlock", "Dash" },
-				},
-				org = {
-					headline_highlights = { "Headline1", "Headline2", "CodeBlock", "Dash" },
+					bullets = { "", "✸", "◉", "✿" },
+					bullet_highlights = {
+						"Bullet",
+					},
+					quote_highlight = "Quote",
+					headline_highlights = {
+						"Headline1",
+						"Headline2",
+						"Headline3",
+						"Headline4",
+						"CodeBlock",
+						"Dash",
+					},
 				},
 			})
 		end,
