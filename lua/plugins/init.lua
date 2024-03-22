@@ -132,6 +132,10 @@ return {
 		end,
 	},
 	{
+		"luckasRanarison/tailwind-tools.nvim",
+		opts = {}, -- your configuration
+	},
+	{
 		"jay-babu/project.nvim",
 		main = "project_nvim",
 		event = "VeryLazy",
