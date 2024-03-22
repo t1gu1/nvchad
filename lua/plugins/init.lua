@@ -40,12 +40,6 @@ return {
 		end,
 	},
 	{
-		"razak17/tailwind-fold.nvim",
-		opts = {},
-		dependencies = { "nvim-treesitter/nvim-treesitter" },
-		ft = { "html", "svelte", "astro", "vue", "typescriptreact", "php", "blade" },
-	},
-	{
 		"ThePrimeagen/harpoon",
 		branch = "harpoon2",
 		config = function()
@@ -138,8 +132,24 @@ return {
 		end,
 	},
 	{
+		event = "VeryLazy",
 		"luckasRanarison/tailwind-tools.nvim",
-		ft = { "html", "svelte", "astro", "vue", "typescriptreact", "php", "blade" },
+		opts = {
+			document_color = {
+				enabled = true,
+				kind = "inline",
+				inline_symbol = "󰝤 ",
+				debounce = 200,
+			},
+			conceal = {
+				enabled = true,
+				symbol = "󱏿",
+				highlight = {
+					fg = "#38BDF8",
+				},
+			},
+			custom_filetypes = {},
+		}, -- your configuration
 	},
 	{
 		"jay-babu/project.nvim",
