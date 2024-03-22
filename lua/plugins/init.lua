@@ -1,9 +1,31 @@
+-- User for NvimTree
 local gwidth = vim.api.nvim_list_uis()[1].width
 local gheight = vim.api.nvim_list_uis()[1].height
 local width = 60
 local height = 40
 
+-- Use for Markdown/Headline
+vim.cmd([[highlight Headline1 guibg=#561C24]])
+vim.cmd([[highlight Headline2 guibg=#6D2932]])
+vim.cmd([[highlight CodeBlock guibg=#111111]])
+vim.cmd([[highlight Dash guibg=#333333 gui=bold]])
+
 return {
+	{
+		event = "VeryLazy",
+		"lukas-reineke/headlines.nvim",
+		dependencies = "nvim-treesitter/nvim-treesitter",
+		config = function()
+			require("headlines").setup({
+				markdown = {
+					headline_highlights = { "Headline1", "Headline2", "CodeBlock", "Dash" },
+				},
+				org = {
+					headline_highlights = { "Headline1", "Headline2", "CodeBlock", "Dash" },
+				},
+			})
+		end,
+	},
 	{
 		"ThePrimeagen/harpoon",
 		branch = "harpoon2",
@@ -22,7 +44,7 @@ return {
 				end,
 				desc = "Harpoon - Add file",
 			},
-      {
+			{
 				"<leader>E",
 				function()
 					require("harpoon").ui:toggle_quick_menu(require("harpoon"):list())
@@ -164,23 +186,23 @@ return {
 			},
 		},
 	},
-  {
-    "QuickGD/quickgd.nvim",
-    ft = { "gdshader", "gdshaderinc" },
-    cmd = {
-      "GodotRun",
-      "GodotRunLast",
-      "GodotStart",
-    },
-    init = function()
-      vim.filetype.add {
-        extension = {
-          gdshaderinc = "gdshaderinc",
-        },
-      }
-    end,
-    config = true,
-  },
+	{
+		"QuickGD/quickgd.nvim",
+		ft = { "gdshader", "gdshaderinc" },
+		cmd = {
+			"GodotRun",
+			"GodotRunLast",
+			"GodotStart",
+		},
+		init = function()
+			vim.filetype.add({
+				extension = {
+					gdshaderinc = "gdshaderinc",
+				},
+			})
+		end,
+		config = true,
+	},
 	-- Override plugin definition options
 	{
 		"nvim-treesitter/nvim-treesitter",
