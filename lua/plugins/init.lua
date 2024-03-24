@@ -178,8 +178,8 @@ return {
 		},
 	},
 	{
+		"luckasRanarison/tailwind-tools.nvim",
 		event = "VeryLazy",
-		"t1gu1/tailwind-tools.nvim",
 		opts = {
 			document_color = {
 				enabled = true,
@@ -195,6 +195,18 @@ return {
 				},
 			},
 		},
+	},
+	{
+		"hrsh7th/nvim-cmp",
+		dependencies = {
+			"luckasRanarison/tailwind-tools.nvim", -- TODO change for luckasRanarison/tailwind-tools.nvim
+			"onsails/lspkind-nvim",
+		},
+		opts = function(_, opts)
+			opts.formatting.format = require("lspkind").cmp_format({
+				before = require("tailwind-tools.cmp").lspkind_format,
+			})
+		end,
 	},
 	{
 		"echasnovski/mini.surround",
