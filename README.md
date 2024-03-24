@@ -70,8 +70,7 @@ It remove that space at the bottom of the screen for that visual with nice conte
 
 ## Colorfull Markdown
 
-![image](https://github.com/t1gu1/nvchad/assets/12479055/beafefc5-2799-4e61-9cb4-23a1fbe1a52c)
-
+![image](https://github.com/t1gu1/nvchad/assets/12479055/0eca0601-1c05-4f36-888b-7d57f6090ff7)
 
 ## Navigate Blazingly fast with Harpoon 2 (Added)
 
