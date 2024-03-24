@@ -11,6 +11,7 @@ local options = {
 		html = { { "prettierd", "prettier" } },
 		css = { { "prettierd", "prettier" } },
 		astro = { { "prettierd", "prettier" } },
+		tailwindcss = { { "prettierd", "prettier" } },
 	},
 }
 
