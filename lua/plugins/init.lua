@@ -5,11 +5,11 @@ local width = 60
 local height = 40
 
 -- Use for Markdown/Headline
-vim.cmd([[highlight Bullet guifg=#000000]])
-vim.cmd([[highlight Headline1 guibg=#d93929 guifg=#ffffff gui=bold]])
-vim.cmd([[highlight Headline2 guibg=#00ffa5 guifg=#000000 gui=bold]])
-vim.cmd([[highlight Headline3 guibg=#00ebd7 guifg=#111111]])
-vim.cmd([[highlight Headline4 guibg=#00d5f2 guifg=#232323 gui=italic]])
+vim.cmd([[highlight Bullet guifg=#333333]])
+vim.cmd([[highlight Headline1 guibg=#111111 guifg=#d93929 gui=bold]])
+vim.cmd([[highlight Headline2 guibg=#111111 guifg=#00ffa5 gui=bold]])
+vim.cmd([[highlight Headline3 guibg=#111111 guifg=#00ebd7]])
+vim.cmd([[highlight Headline4 guibg=#111111 guifg=#00d5f2 gui=italic]])
 vim.cmd([[highlight CodeBlock guibg=#111111]])
 vim.cmd([[highlight Dash guibg=#232323 guifg=#222222 gui=bold]])
 vim.cmd([[highlight Quote guifg=#ffffc9]])
