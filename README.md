@@ -33,6 +33,7 @@ First there is an ajustement to not replace the yank by using `d`, `c`, `p` so y
 - `mini.move`           | Move line or selection
 - `lspsaga`             | Nice Lsp action, debug, etc bubble
 - `project.nvim`        | Added to NvDash quick find project
+- `lazygit.nvim`        | An incredible way to have a git visual inside nvim
 
 ## Terminal is simple and keep the theme hilights (NvChad.term)
 
