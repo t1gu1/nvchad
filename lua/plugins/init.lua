@@ -15,6 +15,7 @@ vim.cmd([[highlight Dash guibg=#232323 guifg=#222222 gui=bold]])
 vim.cmd([[highlight Quote guifg=#ffffc9]])
 
 return {
+	-- Visual
 	{
 		event = "VeryLazy",
 		"lukas-reineke/headlines.nvim",
@@ -38,62 +39,6 @@ return {
 				},
 			})
 		end,
-	},
-	{
-		"ThePrimeagen/harpoon",
-		branch = "harpoon2",
-		config = function()
-			require("harpoon").setup()
-		end,
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-			"nvim-telescope/telescope.nvim",
-		},
-		keys = {
-			{
-				"<leader>a",
-				function()
-					require("harpoon"):list():append()
-				end,
-				desc = "Harpoon - Add file",
-			},
-			{
-				"<leader>E",
-				function()
-					require("harpoon").ui:toggle_quick_menu(require("harpoon"):list())
-				end,
-				desc = "Harpoon - Toggle quick menu",
-			},
-			-- Check mappings for that setup: require("harpoon"):list():select(number)
-		},
-	},
-	{
-		"stevearc/conform.nvim",
-		config = function()
-			require("configs.conform")
-		end,
-	},
-	{
-		{
-			"kdheepak/lazygit.nvim",
-			cmd = {
-				"LazyGit",
-				"LazyGitConfig",
-				"LazyGitCurrentFile",
-				"LazyGitFilter",
-				"LazyGitFilterCurrentFile",
-			},
-			-- optional for floating window border decoration
-			dependencies = {
-				"nvim-telescope/telescope.nvim",
-				-- "nvim-lua/plenary.nvim",
-			},
-			-- setting the keybinding for LazyGit with 'keys' is recommended in
-			-- order to load the plugin when the command is run for the first time
-			keys = {
-				{ "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" },
-			},
-		},
 	},
 	{
 		"nvim-tree/nvim-tree.lua",
@@ -154,6 +99,85 @@ return {
 		end,
 	},
 	{
+		"nvim-telescope/telescope.nvim",
+		optional = true,
+		dependencies = { "jay-babu/project.nvim" },
+		opts = function(_, opts)
+			opts.patterns = { ".git" }
+			require("telescope").load_extension("projects")
+		end,
+	},
+	{
+		"HiPhish/rainbow-delimiters.nvim",
+		dependencies = "nvim-treesitter/nvim-treesitter",
+		event = "VeryLazy",
+		main = "rainbow-delimiters.setup",
+	},
+	{
+		event = "VeryLazy",
+		"karb94/neoscroll.nvim",
+		config = function()
+			require("neoscroll").setup({})
+		end,
+	},
+	{
+		"jay-babu/project.nvim",
+		main = "project_nvim",
+		event = "VeryLazy",
+		opts = { ignore_lsp = { "lua_ls" } },
+	},
+
+	-- Utils
+	{
+		"ThePrimeagen/harpoon",
+		branch = "harpoon2",
+		config = function()
+			require("harpoon").setup()
+		end,
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"nvim-telescope/telescope.nvim",
+		},
+		keys = {
+			{
+				"<leader>a",
+				function()
+					require("harpoon"):list():append()
+				end,
+				desc = "Harpoon - Add file",
+			},
+			{
+				"<leader>E",
+				function()
+					require("harpoon").ui:toggle_quick_menu(require("harpoon"):list())
+				end,
+				desc = "Harpoon - Toggle quick menu",
+			},
+		},
+	},
+	{
+		"stevearc/conform.nvim",
+		config = function()
+			require("configs.conform")
+		end,
+	},
+	{
+		{
+			"kdheepak/lazygit.nvim",
+			cmd = {
+				"LazyGit",
+				"LazyGitConfig",
+				"LazyGitCurrentFile",
+				"LazyGitFilter",
+				"LazyGitFilterCurrentFile",
+			},
+			-- optional for floating window border decoration
+			dependencies = {
+				"nvim-telescope/telescope.nvim",
+			},
+		},
+	},
+	{
 		event = "VeryLazy",
 		"t1gu1/tailwind-tools.nvim",
 		opts = {
@@ -173,27 +197,6 @@ return {
 		},
 	},
 	{
-		"jay-babu/project.nvim",
-		main = "project_nvim",
-		event = "VeryLazy",
-		opts = { ignore_lsp = { "lua_ls" } },
-	},
-	{
-		"nvim-telescope/telescope.nvim",
-		optional = true,
-		dependencies = { "jay-babu/project.nvim" },
-		opts = function(_, opts)
-			opts.patterns = { ".git" }
-			require("telescope").load_extension("projects")
-		end,
-	},
-	{
-		"HiPhish/rainbow-delimiters.nvim",
-		dependencies = "nvim-treesitter/nvim-treesitter",
-		event = "VeryLazy",
-		main = "rainbow-delimiters.setup",
-	},
-	{
 		"echasnovski/mini.surround",
 		version = "*",
 		event = "VeryLazy",
@@ -209,20 +212,7 @@ return {
 			require("mini.cursorword").setup()
 		end,
 	},
-	-- {
-	-- 	"echasnovski/mini.animate",
-	-- 	event = "VeryLazy",
-	-- 	version = "*",
-	-- 	config = function()
-	-- 		require("mini.animate").setup({
-	-- 			cursor = { enable = false },
-	-- 			scroll = { enable = true, timing = 51 },
-	-- 			resize = { enable = true },
-	-- 			open = { enable = true },
-	-- 			close = { enable = true },
-	-- 		})
-	-- 	end,
-	-- },
+
 	{
 		"echasnovski/mini.move",
 		version = "*",
@@ -231,6 +221,8 @@ return {
 			require("mini.move").setup()
 		end,
 	},
+
+	-- LSP
 	{
 		"neovim/nvim-lspconfig",
 		dependencies = {
@@ -240,23 +232,7 @@ return {
 			},
 		},
 	},
-	{
-		"QuickGD/quickgd.nvim",
-		ft = { "gdshader", "gdshaderinc" },
-		cmd = {
-			"GodotRun",
-			"GodotRunLast",
-			"GodotStart",
-		},
-		init = function()
-			vim.filetype.add({
-				extension = {
-					gdshaderinc = "gdshaderinc",
-				},
-			})
-		end,
-		config = true,
-	},
+
 	-- Override plugin definition options
 	{
 		"nvim-treesitter/nvim-treesitter",
@@ -277,6 +253,7 @@ return {
 			require("configs.lspconfig")
 		end, -- Override to setup mason-lspconfig
 	},
+
 	-- Better code action UI
 	{
 		"nvimdev/lspsaga.nvim",
