@@ -155,7 +155,9 @@ return {
 	},
 	{
 		event = "VeryLazy",
-		"luckasRanarison/tailwind-tools.nvim",
+		"t1gu1/tailwind-tools.nvim",
+		-- branch = "Add-conceal-enabled-config",
+		-- branch = "Support-.astro-files",
 		opts = {
 			document_color = {
 				enabled = true,
@@ -170,7 +172,6 @@ return {
 					fg = "#38BDF8",
 				},
 			},
-			custom_filetypes = {},
 		}, -- your configuration
 	},
 	{
