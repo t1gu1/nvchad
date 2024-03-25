@@ -18,6 +18,12 @@ map("n", "<leader>q", ":bdelete<cr>", { desc = "Buffer close" })
 
 map("n", "<c-s>", '<cmd>lua require("conform").format()<CR>:w<CR>', { desc = "File Format with conform" })
 map("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", { desc = "Toggle NvimTree" })
+map(
+	"n",
+	"<leader>E",
+	"<cmd>NvimTreeToggle<cr><cmd>NvimTreeCollapse<cr>",
+	{ desc = "Toggle NvimTree to the project root" }
+)
 
 map("n", "<c-->", "<c-x>", { desc = "File Format with conform" })
 map("n", "<c-=>", "<c-a>", { desc = "File Format with conform" })

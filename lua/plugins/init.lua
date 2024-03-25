@@ -147,7 +147,7 @@ return {
 				desc = "Harpoon - Add file",
 			},
 			{
-				"<leader>E",
+				"<leader><leader>e",
 				function()
 					require("harpoon").ui:toggle_quick_menu(require("harpoon"):list())
 				end,
