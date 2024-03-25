@@ -59,6 +59,8 @@ Shortcut: Simply `t`
 
 ## Nice nvim-tree & UI (Customised)
 
+It's nice to know that it will auto close if you'll go out of focus or select a file.
+
 <img width="1703" alt="image" src="https://github.com/t1gu1/nvchad/assets/12479055/cd66209a-3347-4f26-a0ee-277689f69a6a">
 
 ## A Noice popup/box for searching and commands
