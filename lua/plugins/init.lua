@@ -18,6 +18,18 @@ return {
 	-- Visual
 	{
 		event = "VeryLazy",
+		"folke/todo-comments.nvim",
+		dependencies = { "nvim-lua/plenary.nvim" },
+		opts = {},
+	},
+	{
+		event = "VeryLazy",
+		"thenbe/markdown-todo.nvim",
+		ft = { "md", "mdx", "markdown" },
+		config = true,
+	},
+	{
+		event = "VeryLazy",
 		"lukas-reineke/headlines.nvim",
 		dependencies = "nvim-treesitter/nvim-treesitter",
 		config = function()
