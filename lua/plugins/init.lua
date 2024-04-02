@@ -56,8 +56,9 @@ return {
 		"nvim-tree/nvim-tree.lua",
 		opts = function(_, opts)
 			opts.git.enable = true
+			opts.git.ignore = false
 			opts.actions.open_file.quit_on_open = true
-			opts.filters.dotfiles = true
+			opts.filters.dotfiles = false
 			opts.view.float = {
 				enable = true,
 				quit_on_focus_loss = true,
