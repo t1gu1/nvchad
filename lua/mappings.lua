@@ -42,7 +42,12 @@ map("n", "<S-h>", '<cmd>lua MiniMove.move_line("left")<cr>', { desc = "Move - li
 map("n", "<S-l>", '<cmd>lua MiniMove.move_line("right")<cr>', { desc = "Move - line right" })
 
 map("n", "C", "<cmd>%bd|e#<cr>", { desc = "Close all buffers except the current one" })
-map("n", "<leader>gg", "<cmd>LazyGit<CR>", { desc = "LazyGit" })
+map(
+	"n",
+	"<leader>gg",
+	'<cmd>lua require("nvchad.term").toggle { pos = "float", id = "floatTerm", cmd = "lazygit" }<CR>',
+	{ desc = "LazyGit" }
+)
 
 map({ "n", "v" }, "<leader>la", "<cmd>Lspsaga code_action<CR>", { desc = "Lsp Code action" })
 map({ "n", "v" }, "<leader>lh", "<cmd>Lspsaga hover_doc<CR>", { desc = "Lsp Documentation" })

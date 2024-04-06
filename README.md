@@ -102,3 +102,34 @@ It remove that space at the bottom of the screen for that visual with nice conte
 ## A lot of themes
 
 <img width="721" alt="image" src="https://github.com/t1gu1/nvchad/assets/12479055/d3820bfd-13b0-4449-a90f-6b4d9887e3b0">
+
+## Here is my Lazygit config
+```yml
+gui:
+  theme:
+    activeBorderColor:
+      - '#00ffa5'
+      - bold
+    inactiveBorderColor:
+      - '#a5adcb'
+    optionsTextColor:
+      - '#00ebd7'
+    selectedLineBgColor:
+      - '#262a3f'
+    cherryPickedCommitBgColor:
+      - '#494d64'
+    cherryPickedCommitFgColor:
+      - '#8bd5ca'
+    unstagedChangesColor:
+      - '#ed8796'
+    defaultFgColor:
+      - '#cad3f5'
+    searchingActiveBorderColor:
+      - '#eed49f' 
+
+keybinding:
+  universal:
+    quit: '<esc>'
+    quit-alt1: '<c-c>' # alternative/alias of quit
+    return: 'q' # return to previous menu, will quit if there's nowhere to return
+```
