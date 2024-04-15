@@ -9,6 +9,8 @@ map("i", "jk", "<ESC>", { desc = "Escape insert mode" })
 -- Normal mode
 map("n", ";", ":", { desc = "CMD enter command mode" })
 
+map("n", "<leader>f<leader>", "<cmd>Telescope resume<cr>", { desc = "Buffer close" })
+
 map("n", "<leader>fm", function()
 	require("conform").format()
 end, { desc = "File Format with conform" })
