@@ -30,10 +30,10 @@ map(
 map("n", "<c-->", "<c-x>", { desc = "File Format with conform" })
 map("n", "<c-=>", "<c-a>", { desc = "File Format with conform" })
 
-map("n", "d", '"_d', { desc = "Delete whithout remove yank" })
-map("n", "D", '"_D', { desc = "Delete whithout remove yank" })
-map("n", "c", '"_c', { desc = "Replace whithout remove yank" })
-map("n", "x", '"_x', { desc = "Remove whithout remove yank" })
+map("n", "d", '"_d', { desc = "Delete without remove yank" })
+map("n", "D", '"_D', { desc = "Delete without remove yank" })
+map("n", "c", '"_c', { desc = "Replace without remove yank" })
+map("n", "x", '"_x', { desc = "Remove without remove yank" })
 
 map("n", "<S-Up>", '<cmd>lua MiniMove.move_line("up")<cr>', { desc = "Move - line up" })
 map("n", "<S-Down>", '<cmd>lua MiniMove.move_line("down")<cr>', { desc = "Move - line down" })
@@ -82,10 +82,10 @@ end
 
 -- Visual mode
 map("v", "d", '"_d', { desc = "Delete without remove yank" })
-map("v", "D", '"_D', { desc = "Delete whithout remove yank" })
+map("v", "D", '"_D', { desc = "Delete without remove yank" })
 map("v", "p", '"_dP', { desc = "Paste without remove yank" })
 map("v", "P", '"_dP', { desc = "Paste without remove yank" }
-map("v", "x", '"_x', { desc = "Remove whithout remove yank" })
+map("v", "x", '"_x', { desc = "Remove without remove yank" })
 
 map("v", "<S-Up>", '<cmd>lua MiniMove.move_selection("up")<cr>', { desc = "Move - selection up" })
 map("v", "<S-Down>", '<cmd>lua MiniMove.move_selection("down")<cr>', { desc = "Move - selection down" })
