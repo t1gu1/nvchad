@@ -8,7 +8,6 @@ local servers = {
 	tailwindcss = {},
 	gdscript = {},
 }
-local nomap = vim.keymap.del
 
 for server_name, server in pairs(servers) do
 	server.on_init = configs.on_init
