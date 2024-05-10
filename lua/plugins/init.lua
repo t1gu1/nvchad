@@ -127,13 +127,6 @@ return {
 		main = "rainbow-delimiters.setup",
 	},
 	{
-		event = "VeryLazy",
-		"karb94/neoscroll.nvim",
-		config = function()
-			require("neoscroll").setup({})
-		end,
-	},
-	{
 		"jay-babu/project.nvim",
 		main = "project_nvim",
 		event = "VeryLazy",
