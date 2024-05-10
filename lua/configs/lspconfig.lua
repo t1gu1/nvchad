@@ -7,6 +7,7 @@ local servers = {
 	astro = {},
 	tailwindcss = {},
 	gdscript = {},
+	gopls = {},
 }
 
 -- Utils functions to redefine the "gd" function to remove the index.d.ts files from GD

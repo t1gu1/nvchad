@@ -14,6 +14,7 @@ local options = {
 		"stylua",
 		"markdownlint",
 		"tailwindcss-language-server",
+		"gopls",
 	}, -- not an option from mason.nvim
 
 	PATH = "skip",
