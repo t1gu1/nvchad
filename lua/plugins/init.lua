@@ -189,12 +189,12 @@ return {
 		opts = {
 			document_color = {
 				enabled = true,
-				kind = "inline",
+				kind = "foreground",
 				inline_symbol = "󰝤 ",
 				debounce = 200,
 			},
 			conceal = {
-				enabled = true,
+				enabled = false,
 				symbol = "󱏿",
 				highlight = {
 					fg = "#38BDF8",
