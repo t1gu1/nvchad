@@ -203,6 +203,26 @@ return {
 		},
 	},
 	{
+		"numToStr/Comment.nvim",
+		opts = {
+			---LHS of toggle mappings in NORMAL mode
+			toggler = {
+				line = "<leader><leader>/",
+				block = "<leader>/",
+			},
+			---LHS of operator-pending mappings in NORMAL and VISUAL mode
+			opleader = {
+				line = "<leader><leader>/",
+				block = "<leader>/",
+			},
+			mappings = {
+				basic = true,
+				extra = false,
+			},
+		},
+		event = "VeryLazy",
+	},
+	{
 		"hrsh7th/nvim-cmp",
 		dependencies = {
 			"luckasRanarison/tailwind-tools.nvim", -- TODO change for luckasRanarison/tailwind-tools.nvim
