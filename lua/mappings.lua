@@ -58,6 +58,14 @@ map({ "n", "v" }, "<leader>la", "<cmd>Lspsaga code_action<CR>", { desc = "Lsp Co
 map({ "n", "v" }, "<leader>lh", "<cmd>Lspsaga hover_doc<CR>", { desc = "Lsp Documentation" })
 map({ "n", "v" }, "<leader>ld", "<cmd>Lspsaga show_cursor_diagnostics<CR>", { desc = "Lsp cursor diagnostics" })
 
+-- Simply remove if you want the default live_grep from telescope
+map(
+	{ "n", "v" },
+	"<leader>fw",
+	"<cmd>lua require('telescope.builtin').live_grep({ additional_args = { '--fixed-strings' }})<CR>",
+	{ desc = "Search a string" }
+)
+
 -- map({ "n", "v" }, "<leader>la", vim.lsp.buf.code_action, { desc = "Lsp Code action" })
 
 map({ "n" }, "t", "<cmd>Telescope terms<CR>", { desc = "Terminal List" })
