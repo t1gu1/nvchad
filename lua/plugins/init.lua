@@ -23,6 +23,52 @@ return {
 		opts = {},
 	},
 	{
+		"brenoprata10/nvim-highlight-colors",
+		event = "VeryLazy",
+		config = function()
+			vim.opt.termguicolors = true
+
+			require("nvim-highlight-colors").setup({
+				-- Project color | TODO: Find a way to link/load that for a specefic project.
+				custom_colors = {
+					{ label = "bg%-accent", color = "#3D27C2FF" },
+					{ label = "bg%-elevated%-primary", color = "#FFFDF7FF" },
+					{ label = "bg%-elevated%-secondary", color = "#FFFBE9FF" },
+					{ label = "bg%-elevated%-tertiary", color = "#FFFDF7FF" },
+					{ label = "bg%-primary", color = "#FFFDF7FF" },
+					{ label = "bg%-secondary", color = "#FFFBE9FF" },
+					{ label = "bg%-tertiary", color = "#FFFDF7FF" },
+					{ label = "border%-accent", color = "#3D27C2FF" },
+					{ label = "border%-contrast%-max", color = "#131313FF" },
+					{ label = "border%-contrast%-max%-2", color = "#131313FF" },
+					{ label = "border%-contrast%-mid", color = "#BBBAC1FF" },
+					{ label = "border%-error", color = "#FF2123FF" },
+					{ label = "border%-success", color = "#259E4DFF" },
+					{ label = "btn%-primary", color = "#FFCD1FFF" },
+					{ label = "btn%-primary%-disabled", color = "#BBBAC1FF" },
+					{ label = "btn%-primary%-hover", color = "#F8D477FF" },
+					{ label = "btn%-primary%-pressed", color = "#F8D477FF" },
+					{ label = "ctn%-accent", color = "#3D27C2FF" },
+					{ label = "ctn%-accent%-2", color = "#D59856FF" },
+					{ label = "ctn%-accent%-3", color = "#FFEB9DFF" },
+					{ label = "ctn%-error", color = "#FF2123FF" },
+					{ label = "ctn%-error%-light", color = "#FFB8ACFF" },
+					{ label = "ctn%-success", color = "#57BC71FF" },
+					{ label = "ctn%-success%-hard", color = "#08813AFF" },
+					{ label = "ctn%-success%-light", color = "#ADDFB5FF" },
+					{ label = "ctn%-warning", color = "#F76C14FF" },
+					{ label = "icon%-primary", color = "#131313FF" },
+					{ label = "txt%-accent", color = "#3D27C2FF" },
+					{ label = "txt%-error", color = "#E20000FF" },
+					{ label = "txt%-inactif", color = "#8D8C91FF" },
+					{ label = "txt%-primary", color = "#131313FF" },
+					{ label = "txt%-secondary", color = "#19191CFF" },
+					{ label = "txt%-success", color = "#08813AFF" },
+				},
+			})
+		end,
+	},
+	{
 		event = "VeryLazy",
 		"thenbe/markdown-todo.nvim",
 		ft = { "md", "mdx", "markdown" },
