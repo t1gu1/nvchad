@@ -249,24 +249,11 @@ return {
 		},
 	},
 	{
-		"numToStr/Comment.nvim",
+		"JoosepAlviste/nvim-ts-context-commentstring",
+		lazy = true,
 		opts = {
-			---LHS of toggle mappings in NORMAL mode
-			toggler = {
-				line = "<leader><leader>/",
-				block = "<leader>/",
-			},
-			---LHS of operator-pending mappings in NORMAL and VISUAL mode
-			opleader = {
-				line = "<leader><leader>/",
-				block = "<leader>/",
-			},
-			mappings = {
-				basic = true,
-				extra = false,
-			},
+			enable_autocmd = false,
 		},
-		event = "VeryLazy",
 	},
 	{
 		"hrsh7th/nvim-cmp",
