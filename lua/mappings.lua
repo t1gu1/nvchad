@@ -46,6 +46,38 @@ map("n", "<S-j>", '<cmd>lua MiniMove.move_line("down")<cr>', { desc = "Move - li
 map("n", "<S-h>", '<cmd>lua MiniMove.move_line("left")<cr>', { desc = "Move - line left" })
 map("n", "<S-l>", '<cmd>lua MiniMove.move_line("right")<cr>', { desc = "Move - line right" })
 
+-- NPM commands
+map(
+	"n",
+	"<leader>ns",
+	require("package-info").show,
+	{ silent = true, noremap = true, desc = "Npm Show dependency versions" }
+)
+map(
+	"n",
+	"<leader>nh",
+	require("package-info").hide,
+	{ silent = true, noremap = true, desc = "Npm Hide dependency versions" }
+)
+map(
+	"n",
+	"<leader>nu",
+	require("package-info").update,
+	{ silent = true, noremap = true, desc = "Npm Update dependency on the line" }
+)
+map(
+	"n",
+	"<leader>np",
+	require("package-info").change_version,
+	{ silent = true, noremap = true, desc = "Npm Install a different dependency version" }
+)
+map(
+	"n",
+	"<leader>nd",
+	require("package-info").delete,
+	{ silent = true, noremap = true, desc = "Npm Delete dependency on the line" }
+)
+
 map("n", "C", "<cmd>%bd|e#<cr>", { desc = "Close all buffers except the current one" })
 map(
 	"n",
