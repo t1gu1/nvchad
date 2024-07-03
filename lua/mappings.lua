@@ -20,6 +20,15 @@ map("n", "<leader>d/", "<cmd>noh<cr>", { desc = "Turn off highlighting until the
 map("n", "<ESC>", "<cmd>q<cr>", { desc = "Close buffer" })
 map("n", "<leader>q", ":bdelete<cr>", { desc = "Buffer close" })
 
+-- Split view
+map("n", "<leader>sh", "<cmd>split<cr>", { desc = "Split Horizontal" })
+map("n", "<leader>sv", "<cmd>vsplit<cr>", { desc = "Split Vertical" })
+-- On Mac you need to disabled keyboard shorcuts in the settings. (I personnaly change them to works with command)
+map("n", "<C-Left>", "<cmd>wincmd h<cr>", { desc = "Split View - Go to left" })
+map("n", "<C-Right>", "<cmd>wincmd l<cr>", { desc = "Split View - Go to right" })
+map("n", "<C-Up>", "<cmd>wincmd k<cr>", { desc = "Split View - Go to top" })
+map("n", "<C-Down>", "<cmd>wincmd j<cr>", { desc = "Split View - Go to bottom" })
+
 map("n", "<c-s>", '<cmd>lua require("conform").format()<CR>:w<CR>', { desc = "File Format with conform" })
 map("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", { desc = "Toggle NvimTree" })
 map(
