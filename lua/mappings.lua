@@ -114,12 +114,18 @@ map({ "n" }, "t", "<cmd>Telescope terms<CR>", { desc = "Terminal List" })
 local lastTermIdUsed = 1
 
 map({ "n" }, "<leader>t", function()
-	require("nvchad.term").toggle({ pos = "float", id = lastTermIdUsed })
+	require("nvchad.term").toggle({
+		pos = "float",
+		id = lastTermIdUsed,
+	})
 end, { desc = "Terminal Toggle Floating" })
 
 for id = 1, 9 do
 	map({ "n" }, id .. "<leader>t", function()
-		require("nvchad.term").toggle({ pos = "float", id = id })
+		require("nvchad.term").toggle({
+			pos = "float",
+			id = id,
+		})
 		lastTermIdUsed = id
 	end, { desc = "Terminal Toggle to " .. id })
 end

@@ -10,18 +10,18 @@ M.ui = {
 	tabufline = {
 		order = { "buffers", "tabs" }, -- Add "treeOffset" if you dont use nvimTreee like a popup
 	},
+}
 
-	term = {
-		-- hl = "Normal:term,WinSeparator:WinSeparator",
-		-- sizes = { sp = 0.3, vsp = 0.2 },
-		float = {
-			relative = "editor",
-			row = 0.1,
-			col = 0.045,
-			width = 0.9,
-			height = 0.8,
-			border = "single",
-		},
+M.term = {
+	-- hl = "Normal:term,WinSeparator:WinSeparator",
+	-- sizes = { sp = 0.3, vsp = 0.2 },
+	float = {
+		relative = "editor",
+		row = 0.1,
+		col = 0.045,
+		width = 0.9,
+		height = 0.8,
+		border = "single",
 	},
 }
 
