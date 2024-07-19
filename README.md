@@ -133,3 +133,12 @@ keybinding:
     quit-alt1: '<c-c>' # alternative/alias of quit
     return: 'q' # return to previous menu, will quit if there's nowhere to return
 ```
+
+## On linux I install these
+If x11
+
+- xclip
+
+If Wayland
+
+- wl-copy and wl-paste
