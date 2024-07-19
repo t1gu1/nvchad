@@ -18,6 +18,7 @@ end, { desc = "File Format with conform" })
 map("n", "<leader>d/", "<cmd>noh<cr>", { desc = "Turn off highlighting until the next search" })
 
 map("n", "<ESC>", "<cmd>q<cr>", { desc = "Close buffer" })
+map("t", "<ESC>", "<cmd>q<cr>", { desc = "Close buffer" })
 map("n", "<leader>q", ":bdelete<cr>", { desc = "Buffer close" })
 
 -- Split view
