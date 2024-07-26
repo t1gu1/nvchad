@@ -90,9 +90,9 @@ map(
 
 map("n", "C", "<cmd>%bd|e#<cr>", { desc = "Close all buffers except the current one" })
 map(
-  "n",
-  "<leader>gg",
-  '<cmd>lua require("nvchad.term").toggle { pos = "float", id = "floatTerm", cmd = "lazygit" }<CR>',
+	"n",
+	"<leader>gg",
+	'<cmd>lua require("nvchad.term").toggle { pos = "float", id = "floatTerm", cmd = "lazygit" }<CR>',
 	{ desc = "LazyGit" }
 )
 
