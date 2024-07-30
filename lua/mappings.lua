@@ -9,7 +9,12 @@ map("i", "jk", "<ESC>", { desc = "Escape insert mode" })
 -- Normal mode
 map("n", ";", ":", { desc = "CMD enter command mode" })
 
-map("n", "<leader>f<leader>", "<cmd>Telescope resume<cr>", { desc = "Buffer close" })
+map(
+	"n",
+	"<leader>f<leader>",
+	"<cmd>lua require('image').clear()<cr><cmd>Telescope resume<cr>",
+	{ desc = "Buffer close" }
+)
 
 map("n", "<leader>fm", function()
 	require("conform").format()
@@ -29,15 +34,18 @@ map("n", "<C-Left>", "<cmd>wincmd h<cr>", { desc = "Split View - Go to left" })
 map("n", "<C-Right>", "<cmd>wincmd l<cr>", { desc = "Split View - Go to right" })
 map("n", "<C-Up>", "<cmd>wincmd k<cr>", { desc = "Split View - Go to top" })
 map("n", "<C-Down>", "<cmd>wincmd j<cr>", { desc = "Split View - Go to bottom" })
-
 map("n", "<c-s>", '<cmd>lua require("conform").format()<CR>:w<CR>', { desc = "File Format with conform" })
-map("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", { desc = "Toggle NvimTree" })
+
+-- Will fallback to this if you don't want to use Yazi
+map("n", "<leader>e", "<cmd>lua require('image').clear()<cr><cmd>NvimTreeToggle<cr>", { desc = "Toggle NvimTree" })
 map(
 	"n",
 	"<leader>E",
-	"<cmd>NvimTreeToggle<cr><cmd>NvimTreeCollapse<cr>",
+	"<cmd>lua require('image').clear()<cr><cmd>NvimTreeToggle<cr><cmd>NvimTreeCollapse<cr>",
 	{ desc = "Toggle NvimTree to the project root" }
 )
+
+map("n", "<leader>O", "<cmd>terminal Open ./<cr>", { desc = "Toggle NvimTree to the project root" })
 
 map("n", "<c-->", "<c-x>", { desc = "File Format with conform" })
 map("n", "<c-=>", "<c-a>", { desc = "File Format with conform" })
@@ -92,7 +100,7 @@ map("n", "C", "<cmd>%bd|e#<cr>", { desc = "Close all buffers except the current 
 map(
 	"n",
 	"<leader>gg",
-	'<cmd>lua require("nvchad.term").toggle { pos = "float", id = "floatTerm", cmd = "lazygit" }<CR>',
+	'<cmd>lua require("image").clear()<cr><cmd>lua require("nvchad.term").toggle { pos = "float", id = "floatTerm", cmd = "lazygit" }<CR>',
 	{ desc = "LazyGit" }
 )
 
@@ -104,17 +112,24 @@ map({ "n", "v" }, "<leader>ld", "<cmd>Lspsaga show_cursor_diagnostics<CR>", { de
 map(
 	{ "n", "v" },
 	"<leader>fw",
-	"<cmd>lua require('telescope.builtin').live_grep({ additional_args = { '--fixed-strings' }})<CR>",
+	"<cmd>lua require('image').clear()<cr><cmd>lua require('telescope.builtin').live_grep({ additional_args = { '--fixed-strings' }})<CR>",
+	{ desc = "Search a string" }
+)
+map(
+	{ "n", "v" },
+	"<leader>ff",
+	"<cmd>lua require('image').clear()<cr><cmd>lua require('telescope.builtin').find_files()<CR>",
 	{ desc = "Search a string" }
 )
 
 -- map({ "n", "v" }, "<leader>la", vim.lsp.buf.code_action, { desc = "Lsp Code action" })
 
-map({ "n" }, "t", "<cmd>Telescope terms<CR>", { desc = "Terminal List" })
+map({ "n" }, "t", "<cmd>lua require('image').clear()<cr><cmd>Telescope terms<CR>", { desc = "Terminal List" })
 
 local lastTermIdUsed = 1
 
 map({ "n" }, "<leader>t", function()
+	require("image").clear()
 	require("nvchad.term").toggle({
 		pos = "float",
 		id = lastTermIdUsed,
@@ -123,6 +138,7 @@ end, { desc = "Terminal Toggle Floating" })
 
 for id = 1, 9 do
 	map({ "n" }, id .. "<leader>t", function()
+		require("image").clear()
 		require("nvchad.term").toggle({
 			pos = "float",
 			id = id,
@@ -134,6 +150,7 @@ end
 -- Harpoon
 for num = 1, 9 do
 	map({ "n" }, "<leader>" .. num, function()
+		require("image").clear()
 		require("harpoon"):list():select(num)
 	end, { desc = "Harpoon - Go to " .. num })
 end

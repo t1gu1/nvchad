@@ -165,6 +165,24 @@ return {
 		end,
 	},
 	{
+		"3rd/image.nvim",
+		event = "VeryLazy",
+		-- Disable on Windows system
+		cond = function()
+			return vim.fn.has("win32") ~= 1
+		end,
+		dependencies = {
+			"leafo/magick",
+		},
+		opts = function(_, opts)
+			opts.integrations = opts.integrations or {}
+			opts.integrations.markdown = opts.integrations.markdown or {}
+			opts.integrations.markdown.only_render_image_at_cursor = true
+			opts.window_overlap_clear_enabled = true
+			opts.tmux_show_only_in_active_window = true
+		end,
+	},
+	{
 		event = "VeryLazy",
 		"thenbe/markdown-todo.nvim",
 		ft = { "md", "mdx", "markdown" },
@@ -193,6 +211,36 @@ return {
 				},
 			})
 		end,
+	},
+	-- Comment this, if you don't want to use Yazi
+	{
+		"mikavilpas/yazi.nvim",
+		event = "VeryLazy",
+		keys = {
+			{
+				-- Open in the current working directory
+				"<leader>E",
+				function()
+					require("image").clear()
+					require("yazi").yazi(nil, vim.fn.getcwd()).toggle()
+				end,
+				desc = "Open the file manager in nvim's working directory",
+			},
+			{
+				-- Open in the current working directory
+				"<leader>e",
+				function()
+					require("image").clear()
+					require("yazi").yazi(nil, vim.fn.expand("%:p")).toggle()
+				end,
+				desc = "Open the file manager in nvim's near working file",
+			},
+		},
+		opts = {
+			open_for_directories = true,
+			use_ya_for_events_reading = true,
+			-- use_yazi_client_id_flag = true,
+		},
 	},
 	{
 		"nvim-tree/nvim-tree.lua",

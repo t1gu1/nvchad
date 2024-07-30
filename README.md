@@ -103,6 +103,10 @@ It remove that space at the bottom of the screen for that visual with nice conte
 
 <img width="721" alt="image" src="https://github.com/t1gu1/nvchad/assets/12479055/d3820bfd-13b0-4449-a90f-6b4d9887e3b0">
 
+## Use Yazi as file manager (Let you see images and preview of files in terminal)
+
+Here a youtube video talking about it: <https://www.youtube.com/watch?v=hrFWNuHCL8Y>
+
 ## Here is my Lazygit config
 ```yml
 gui:
@@ -133,6 +137,12 @@ keybinding:
     quit-alt1: '<c-c>' # alternative/alias of quit
     return: 'q' # return to previous menu, will quit if there's nowhere to return
 ```
+
+## Yazi dotfile
+
+In `.config/yazi/` create a `theme.toml` file and paste it that theme: <https://github.com/catppuccin/yazi/blob/main/themes/macchiato.toml>
+
+On Mac OS you may want to install: `brew install coreutils`
 
 ## On linux I install these
 If x11
