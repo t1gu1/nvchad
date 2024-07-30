@@ -214,8 +214,6 @@ return {
 				},
 			}
 			opts.view.side = "right"
-			opts.view.width = width
-			opts.view.height = height
 		end,
 	},
 	{
