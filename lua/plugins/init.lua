@@ -277,6 +277,12 @@ return {
 	{
 		"ThePrimeagen/harpoon",
 		branch = "harpoon2",
+		opts = {
+			settings = {
+				save_on_toggle = true,
+				sync_on_ui_close = true,
+			},
+		},
 		config = function()
 			require("harpoon").setup()
 		end,
@@ -286,18 +292,37 @@ return {
 		},
 		keys = {
 			{
+
 				"<leader>a",
 				function()
-					require("harpoon"):list():append()
+					local pipe = io.popen("git branch --show-current")
+					repeat
+						local c = pipe:read(4 * 1048576)
+						if c then
+							-- Do something with the char received
+							print(c)
+							require("harpoon"):list(c):add()
+						end
+					until not c
+					pipe:close()
 				end,
-				desc = "Harpoon - Add file",
+				desc = "Harpoon - Add file related to current git branch",
 			},
 			{
 				"<leader><leader>e",
 				function()
-					require("harpoon").ui:toggle_quick_menu(require("harpoon"):list())
+					local pipe = io.popen("git branch --show-current")
+					repeat
+						local c = pipe:read(4 * 1048576)
+						if c then
+							-- Do something with the char received
+							print(c)
+							require("harpoon").ui:toggle_quick_menu(require("harpoon"):list(c))
+						end
+					until not c
+					pipe:close()
 				end,
-				desc = "Harpoon - Toggle quick menu",
+				desc = "Harpoon - Toggle quick menu related to current git branch",
 			},
 		},
 	},
