@@ -134,7 +134,14 @@ end
 -- Harpoon
 for num = 1, 9 do
 	map({ "n" }, "<leader>" .. num, function()
-		require("harpoon"):list():select(num)
+		local pipe = io.popen("git branch --show-current")
+		repeat
+			local c = pipe:read(4 * 1048576)
+			if c then
+				require("harpoon"):list(c):select(num)
+			end
+		until not c
+		pipe:close()
 	end, { desc = "Harpoon - Go to " .. num })
 end
 

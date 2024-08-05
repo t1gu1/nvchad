@@ -299,8 +299,6 @@ return {
 					repeat
 						local c = pipe:read(4 * 1048576)
 						if c then
-							-- Do something with the char received
-							print(c)
 							require("harpoon"):list(c):add()
 						end
 					until not c
@@ -315,8 +313,6 @@ return {
 					repeat
 						local c = pipe:read(4 * 1048576)
 						if c then
-							-- Do something with the char received
-							print(c)
 							require("harpoon").ui:toggle_quick_menu(require("harpoon"):list(c))
 						end
 					until not c
