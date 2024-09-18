@@ -202,6 +202,7 @@ return {
 				},
 			}
 			opts.view.side = "right"
+			opts.filters = {}
 		end,
 	},
 	{
