@@ -108,13 +108,6 @@ map(
 	{ desc = "Search a string" }
 )
 
-map(
-	{ "n", "v" },
-	"<leader>ff",
-	"<cmd>Telescope find_files find_command=rg,--ignore,--hidden,--files<CR>",
-	{ desc = "Search a file" }
-)
-
 -- map({ "n", "v" }, "<leader>la", vim.lsp.buf.code_action, { desc = "Lsp Code action" })
 
 map({ "n" }, "t", "<cmd>Telescope terms<CR>", { desc = "Terminal List" })
