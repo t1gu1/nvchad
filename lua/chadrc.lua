@@ -1,8 +1,11 @@
+---@type ChadrcConfig
 local M = {}
 local highlights = require("highlights")
 
-M.base64.theme = "rosepine"
-M.base64.hl_override = highlights.override
+M.base46 = {
+	theme = "rosepine",
+	hl_override = highlights.override,
+}
 
 M.term = {
 	-- hl = "Normal:term,WinSeparator:WinSeparator",
@@ -17,10 +20,10 @@ M.term = {
 	},
 }
 
-M.plugins = "plugins"
-
-M.ui.tabufline = {
-	order = { "buffers", "tabs" }, -- Add "treeOffset" if you dont use nvimTreee like a popup
+M.ui = {
+	tabufline = {
+		order = { "buffers", "tabs" }, -- Add "treeOffset" if you dont use nvimTreee like a popup
+	},
 }
 
 M.nvdash = {
@@ -39,15 +42,9 @@ M.nvdash = {
 	},
 
 	buttons = {
-		{ "  Projects", "", "Telescope projects" },
-		{ "  Themes  ", "", "Telescope themes" },
-		{ "  Mappings", "", "NvCheatsheet" },
-	},
-}
-
-M.disabled = {
-	n = {
-		["<leader>e"] = "",
+		{ txt = "  Projects", cmd = "Telescope projects" },
+		{ txt = "  Themes  ", cmd = ":lua require('nvchad.themes').open()" },
+		{ txt = "  Mappings", cmd = "NvCheatsheet" },
 	},
 }
 
