@@ -313,9 +313,8 @@ return {
 	},
 	{
 		"stevearc/conform.nvim",
-		config = function()
-			require("configs.conform")
-		end,
+		-- event = 'BufWritePre', -- uncomment for format on save
+		opts = require("configs.conform"),
 	},
 	{
 		{
@@ -420,6 +419,9 @@ return {
 	-- LSP
 	{
 		"neovim/nvim-lspconfig",
+		config = function()
+			require("configs.lspconfig")
+		end,
 		dependencies = {
 			"ray-x/lsp_signature.nvim",
 			opts = {
