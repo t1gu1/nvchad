@@ -1,16 +1,8 @@
 local M = {}
-
 local highlights = require("highlights")
 
-M.ui = {
-	theme = "rosepine",
-	hl_override = highlights.override,
-
-	-- To fit with nvim-tree
-	tabufline = {
-		order = { "buffers", "tabs" }, -- Add "treeOffset" if you dont use nvimTreee like a popup
-	},
-}
+M.base64.theme = "rosepine"
+M.base64.hl_override = highlights.override
 
 M.term = {
 	-- hl = "Normal:term,WinSeparator:WinSeparator",
@@ -27,7 +19,11 @@ M.term = {
 
 M.plugins = "plugins"
 
-M.ui.nvdash = {
+M.ui.tabufline = {
+	order = { "buffers", "tabs" }, -- Add "treeOffset" if you dont use nvimTreee like a popup
+}
+
+M.nvdash = {
 	load_on_startup = true,
 
 	header = {
