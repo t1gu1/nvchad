@@ -1,5 +1,10 @@
 # NvChad Customised
 
+!! Since the last nvchad update you may need to delete some nvim folders !!
+
+- `rm -r ~/.local/share/nvim`
+- `rm -r ~/.local/state/nvim`
+
 ## Cute Dashboard (Customised)
 
 <img width="1134" alt="image" src="https://github.com/t1gu1/nvchad/assets/12479055/ac0bd860-e3ad-411a-9d36-323b1250cd12">
@@ -13,10 +18,26 @@
 - html
 - css
 
-### Install Pre-requisites
+## How to install
 
 - [Install Nvim 0.9.5](https://neovim.io/)
 - `git clone https://github.com/t1gu1/nvchad ~/.config/nvim && nvim`
+
+### For Flatpack users
+
+- Install NVIM from Flatpack
+- Launch it one time
+- Create nvim folder with `mkdir ~/.var/app/io.neovim.nvim/config/nvim`
+- Create nvim alias with `echo "alias nvim="flatpak run io.neovim.nvim"" >> ./bashrc`
+- Reload bash with by writting `bash` the terminal
+- Then you can clone with `git clone https://github.com/t1gu1/nvchad ~/.config/nvim && nvim`
+
+#### Here is a one line command: (Still need to run nvim one time before)
+- `mkdir ~/.var/app/io.neovim.nvim/config/nvim && echo "alias nvim="flatpak run io.neovim.nvim"" >> ./bashrc && bash && git clone https://github.com/t1gu1/nvchad ~/.config/nvim && nvim`
+
+### Install Pre-requisites
+
+
 - [Nerd Font](https://www.nerdfonts.com/) as your terminal font. Make sure the nerd font you set doesn't end with Mono to prevent small icons. Example : JetbrainsMono Nerd Font and not JetbrainsMono Nerd Font Mono
 - Ripgrep is required for grep searching with Telescope (OPTIONAL).
 - GCC, Windows users must have mingw installed and set on path.
