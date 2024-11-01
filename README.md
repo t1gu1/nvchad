@@ -37,12 +37,13 @@
 
 ### Install Pre-requisites
 
-
 - [Nerd Font](https://www.nerdfonts.com/) as your terminal font. Make sure the nerd font you set doesn't end with Mono to prevent small icons. Example : JetbrainsMono Nerd Font and not JetbrainsMono Nerd Font Mono
 - Ripgrep is required for grep searching with Telescope (OPTIONAL).
+- When you open the first time, always check your setup with the `:checkhealth` command
+
+#### Windows user may have some extra steps
 - GCC, Windows users must have mingw installed and set on path.
 - Make, Windows users must have GnuWin32 installed and set on path.
-- When you open the first time, always check your setup with the `:checkhealth` command
 
 ### Nice little plugins added & ajustment (Cause not mentionned later in this doc)
 
@@ -93,6 +94,9 @@ It remove that space at the bottom of the screen for that visual with nice conte
 <img width="997" alt="image" src="https://github.com/t1gu1/nvchad/assets/12479055/201dfb98-4b2f-4a4b-af47-6b11c2283007">
 
 ## Navigate Blazingly fast with Harpoon 2 (Added)
+
+A special ajustement, is harpoon will change based on the branch of your project!
+So each branch got a different shortcuts for your new feature implementation.
 
 - `<leader>a` Add file in Harpoon
 - `<leader>E` Show Harpoon explorer (This is a CAP E)
