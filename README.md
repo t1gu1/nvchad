@@ -20,7 +20,7 @@
 
 ## How to install
 
-- [Install Nvim 0.9.5](https://neovim.io/)
+- [Install Nvim](https://neovim.io/)
 - `git clone https://github.com/t1gu1/nvchad ~/.config/nvim && nvim`
 
 ### For Flatpack users
@@ -150,7 +150,7 @@ keybinding:
     return: 'q' # return to previous menu, will quit if there's nowhere to return
 ```
 
-## On linux I install these
+## On linux, you could install these if it is missing.
 If x11
 
 - xclip
