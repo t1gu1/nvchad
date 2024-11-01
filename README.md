@@ -117,7 +117,7 @@ It remove that space at the bottom of the screen for that visual with nice conte
 
 ## A lot of themes
 
-<img width="721" alt="image" src="https://github.com/t1gu1/nvchad/assets/12479055/d3820bfd-13b0-4449-a90f-6b4d9887e3b0">
+![image](https://github.com/user-attachments/assets/9e7e5907-24e7-4f76-9b3b-65c21cc57732)
 
 ## Here is my Lazygit config
 ```yml
