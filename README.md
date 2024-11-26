@@ -35,7 +35,7 @@ mkdir ~/.var/app/io.neovim.nvim/config/nvim && echo "alias nvim='flatpak run io.
 
 ### Pre-requisites
 - [Nerd Font](https://www.nerdfonts.com/) as your terminal font. Avoid fonts ending with Mono.
-- Ripgrep for grep searching with Telescope (optional).
+- `Ripgrep` for grep searching with Telescope (optional).
 - Run `:checkhealth` after opening nvim for the first time.
 
 ### Windows Users
