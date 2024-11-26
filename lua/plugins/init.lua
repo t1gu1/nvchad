@@ -10,6 +10,20 @@ return {
 		"github/copilot.vim",
 	},
 	{
+		"CopilotC-Nvim/CopilotChat.nvim",
+		event = "VeryLazy",
+		branch = "canary",
+		dependencies = {
+			{ "github/copilot.vim" }, -- or zbirenbaum/copilot.lua
+			{ "nvim-lua/plenary.nvim" }, -- for curl, log wrapper
+		},
+		build = "make tiktoken", -- Only on MacOS or Linux
+		opts = {
+			-- See Configuration section for options
+		},
+		-- See Commands section for default commands if you want to lazy load on them
+	},
+	{
 		"rmagatti/auto-session",
 		lazy = false,
 
@@ -392,7 +406,7 @@ return {
 		version = "*",
 		event = "VeryLazy",
 		config = function()
-			require("mini.surround").setup()
+			require("mini.surround").setup({ n_lines = 260 })
 		end,
 	},
 	{

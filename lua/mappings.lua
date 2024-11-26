@@ -23,6 +23,22 @@ map("n", "<ESC>", "<cmd>q<cr>", { desc = "Close buffer" })
 map("t", "<ESC>", "<cmd>q<cr>", { desc = "Close buffer" })
 map("n", "<leader>q", ":bdelete<cr>", { desc = "Buffer close" })
 
+-- Copilot
+map(
+	{ "v" },
+	"<leader>cc",
+	"<cmd>CopilotChatReset<cr><cmd>'<,'>CopilotChat<cr>",
+	{ desc = "Copilot Chat of the Selection" }
+)
+map(
+	{ "n" },
+	"<leader>cc",
+	"ggVG<cmd>CopilotChat<cr><cmd>CopilotChatToggle<cr><cmd>CopilotChat<cr>",
+	{ desc = "Copilot Chat of all file" }
+)
+map({ "n" }, "<leader>ct", "<cmd>CopilotChatToggle<cr>", { desc = "Copilot Chat Toogle" })
+map({ "n" }, "<leader>cr", "<cmd>CopilotChatReset<cr>", { desc = "Copilot Chat Reset" })
+
 -- Split view
 map("n", "<leader>sh", "<cmd>split<cr>", { desc = "Split Horizontal" })
 map("n", "<leader>sv", "<cmd>vsplit<cr>", { desc = "Split Vertical" })
