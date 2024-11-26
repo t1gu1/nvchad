@@ -11,6 +11,8 @@ map("n", ";", ":", { desc = "CMD enter command mode" })
 
 map("n", "<leader>f<leader>", "<cmd>Telescope resume<cr>", { desc = "Buffer close" })
 
+map("n", "<leader>sr", "<cmd>SessionRestore<cr>", { desc = "Buffer close" })
+
 map("n", "<leader>fm", function()
 	require("conform").format()
 end, { desc = "File Format with conform" })

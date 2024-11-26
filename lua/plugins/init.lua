@@ -5,6 +5,23 @@ local width = 60
 local height = 40
 
 return {
+	{
+		event = "VeryLazy",
+		"github/copilot.vim",
+	},
+	{
+		"rmagatti/auto-session",
+		lazy = false,
+
+		---enables autocomplete for opts
+		---@module "auto-session"
+		opts = {
+			enabled = true,
+			auto_restore = true,
+			suppressed_dirs = { "~/", "~/Projects", "~/Downloads", "/" },
+			use_git_branch = true,
+		},
+	},
 	-- Visual
 	{
 		event = "VeryLazy",
