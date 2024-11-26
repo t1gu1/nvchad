@@ -57,6 +57,19 @@ First there is an ajustement to not replace the yank by using `d`, `c`, `p` so y
 - `project.nvim`        | Added to NvDash quick find project
 - `lazygit.nvim`        | An incredible way to have a git visual inside nvim
 
+#### How to use mini.surround
+
+Examples: (Has to be done in normal mode, fast)
+
+- `sr)"` will replace the parentheses () surrounding the position by `""`
+- `sr]}` will replace the brackets [] surrounding the position by `{}`
+- `sd)` will delete the parentheses () surrounding the position
+- `sd]` will delete the brackets [] surrounding the position
+- `saiw"` will add `""` around the word under the cursorword
+- `viwsa"` will add `""` around the word under the cursorword (Yeah same things but you can do it slower)
+
+You get it i guess. The 3 main commands are `sr`, `sd`, `sa` for surround replace, delete, add.
+
 ## Terminal is simple and keep the theme hilights (NvChad.term)
 
 <img width="1029" alt="image" src="https://github.com/t1gu1/nvchad/assets/12479055/14300c6c-51e7-48a7-9dd8-0f6a1a36f105">
