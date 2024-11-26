@@ -133,4 +133,3 @@ keybinding:
 
 ### If Wayland
 - Install `wl-copy` and `wl-paste` (Now it is under `wl-clipboard` I think)
-```
