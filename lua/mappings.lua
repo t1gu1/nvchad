@@ -5,6 +5,7 @@ local map = vim.keymap.set
 
 -- Insert mode
 map("i", "jk", "<ESC>", { desc = "Escape insert mode" })
+map({ "n", "i", "v" }, "<C-a>", "<ESC>ggVG", { desc = "Select ALL" })
 
 -- Normal mode
 map("n", ";", ":", { desc = "CMD enter command mode" })
@@ -177,3 +178,14 @@ map("v", "<S-k>", '<cmd>lua MiniMove.move_selection("up")<cr>', { desc = "Move -
 map("v", "<S-j>", '<cmd>lua MiniMove.move_selection("down")<cr>', { desc = "Move - selection down" })
 map("v", "<S-h>", '<cmd>lua MiniMove.move_selection("left")<cr>', { desc = "Move - selection left" })
 map("v", "<S-l>", '<cmd>lua MiniMove.move_selection("right")<cr>', { desc = "Move - selection right" })
+
+-- Copilot
+map("i", "<C-CR>", 'copilot#Accept("\\<CR>")', {
+	expr = true,
+	replace_keycodes = false,
+})
+map("i", "<C-Right>", 'copilot#AcceptWord("\\<CR>")', {
+	expr = true,
+	replace_keycodes = false,
+})
+vim.g.copilot_no_tab_map = true

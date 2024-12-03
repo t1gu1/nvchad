@@ -49,3 +49,6 @@ autocmd!
 au TextYankPost * silent! lua vim.highlight.on_yank({higroup="Visual", timeout=200})
 augroup END
 ]])
+
+-- vim.api.nvim_set_keymap("i", "<c-space>", 'copilot#Accept("<CR>")', { expr = true, noremap = true, silent = true })
+-- vim.g.copilot_no_tab_map = true
