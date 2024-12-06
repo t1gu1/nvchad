@@ -13,6 +13,14 @@ map("n", ";", ":", { desc = "CMD enter command mode" })
 map("n", "<leader>f<leader>", "<cmd>Telescope resume<cr>", { desc = "Buffer close" })
 
 map("n", "<leader>sr", "<cmd>SessionRestore<cr>", { desc = "Buffer close" })
+-- Run lua file
+map("n", "<leader>rl", function()
+	require("nvchad.term").new({
+		pos = "float",
+		id = "floatTerm",
+		cmd = "cd " .. vim.fn.expand("%:h") .. " && lua " .. vim.fn.expand("%:t"),
+	})
+end, { desc = "Run lua file in terminal" })
 
 map("n", "<leader>fm", function()
 	require("conform").format()
