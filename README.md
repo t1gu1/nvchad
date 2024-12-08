@@ -26,7 +26,8 @@ Since the last NvChad update, you may need to delete some nvim folders:
 3. Create nvim folder: `mkdir ~/.var/app/io.neovim.nvim/config/nvim`
 4. Create nvim alias: `echo "alias nvim='flatpak run io.neovim.nvim'" >> ~/.bashrc`
 5. Reload bash: `source ~/.bashrc`
-6. Clone the repo: `git clone https://github.com/t1gu1/nvchad ~/.config/nvim && nvim`
+6. symlink flatpack `nvim` folder to the use config with: `ln -s ~/.var/app/io.neovim.nvim/config/nvim ~/.config/`
+7. Clone the repo: `git clone https://github.com/t1gu1/nvchad ~/.config/nvim && nvim`
 
 ### One-line Command for Flatpak Users
 ```sh
