@@ -187,6 +187,11 @@ map("i", "<C-CR>", 'copilot#Accept("\\<CR>")', {
 	expr = true,
 	replace_keycodes = false,
 })
+map("i", "<A-CR>", 'copilot#Accept("\\<CR>")', {
+	expr = true,
+	replace_keycodes = false,
+})
+
 map("i", "<C-Right>", 'copilot#AcceptWord("\\<CR>")', {
 	expr = true,
 	replace_keycodes = false,
