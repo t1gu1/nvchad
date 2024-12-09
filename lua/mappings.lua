@@ -116,12 +116,7 @@ map(
 )
 
 map("n", "C", "<cmd>%bd|e#<cr>", { desc = "Close all buffers except the current one" })
-map(
-	"n",
-	"<leader>gg",
-	'<cmd>lua require("nvchad.term").toggle { pos = "float", id = "floatTerm", cmd = "lazygit" }<CR>',
-	{ desc = "LazyGit" }
-)
+map("n", "<leader>gg", "<cmd>Neogit<CR>", { desc = "NeoGit" })
 
 map({ "n", "v" }, "<leader>la", "<cmd>Lspsaga code_action<CR>", { desc = "Lsp Code action" })
 map({ "n", "v" }, "<leader>lh", "<cmd>Lspsaga hover_doc<CR>", { desc = "Lsp Documentation" })
