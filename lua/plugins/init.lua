@@ -19,7 +19,7 @@ return {
 	{
 		"CopilotC-Nvim/CopilotChat.nvim",
 		event = "VeryLazy",
-		branch = "canary",
+		branch = "main",
 		dependencies = {
 			{ "github/copilot.vim" }, -- or zbirenbaum/copilot.lua
 			{ "nvim-lua/plenary.nvim" }, -- for curl, log wrapper
@@ -354,21 +354,35 @@ return {
 		-- event = 'BufWritePre', -- uncomment for format on save
 		opts = require("configs.conform"),
 	},
+	-- {
+	-- 	{
+	-- 		"kdheepak/lazygit.nvim",
+	-- 		cmd = {
+	-- 			"LazyGit",
+	-- 			"LazyGitConfig",
+	-- 			"LazyGitCurrentFile",
+	-- 			"LazyGitFilter",
+	-- 			"LazyGitFilterCurrentFile",
+	-- 		},
+	-- 		-- optional for floating window border decoration
+	-- 		dependencies = {
+	-- 			"nvim-telescope/telescope.nvim",
+	-- 		},
+	-- 	},
+	-- },
 	{
-		{
-			"kdheepak/lazygit.nvim",
-			cmd = {
-				"LazyGit",
-				"LazyGitConfig",
-				"LazyGitCurrentFile",
-				"LazyGitFilter",
-				"LazyGitFilterCurrentFile",
-			},
-			-- optional for floating window border decoration
-			dependencies = {
-				"nvim-telescope/telescope.nvim",
-			},
+		"NeogitOrg/neogit",
+		event = "VeryLazy",
+		dependencies = {
+			"nvim-lua/plenary.nvim", -- required
+			"sindrets/diffview.nvim", -- optional - Diff integration
+
+			-- Only one of these is needed.
+			"nvim-telescope/telescope.nvim", -- optional
+			"ibhagwan/fzf-lua", -- optional
+			"echasnovski/mini.pick", -- optional
 		},
+		config = true,
 	},
 	{
 		"luckasRanarison/tailwind-tools.nvim",
