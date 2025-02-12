@@ -16,6 +16,17 @@ return {
 			vim.g.copilot_no_tab_map = true
 		end,
 	},
+	-- {
+	-- 	"monkoose/DoNe",
+	-- 	event = "VeryLazy",
+	-- 	lazy = true,
+	-- 	-- optional configuration
+	-- 	config = function()
+	-- 		-- as example adding some keybindings
+	-- 		vim.keymap.set("n", "<F5>", "<Cmd>DoNe build<CR>")
+	-- 		--- ...
+	-- 	end,
+	-- },
 	{
 		"CopilotC-Nvim/CopilotChat.nvim",
 		event = "VeryLazy",
