@@ -20,7 +20,15 @@ Since the last NvChad update, you may need to delete some nvim folders:
 1. [Install Nvim](https://neovim.io/)
 2. `git clone https://github.com/t1gu1/nvchad ~/.config/nvim && nvim`
 
-### For Flatpak Users
+### For easier copy/paste on linux
+
+#### If x11
+- Install `xclip`
+
+#### If Wayland
+- Install `wl-clipboard`
+
+### For Flatpak Users (Not perfect instructions, but you got the idea)
 1. Install NVIM from Flatpak
 2. Launch it once
 3. Create nvim folder: `mkdir ~/.var/app/io.neovim.nvim/config/nvim`
@@ -28,11 +36,6 @@ Since the last NvChad update, you may need to delete some nvim folders:
 5. Reload bash: `source ~/.bashrc`
 6. symlink flatpack `nvim` folder to the use config with: `ln -s ~/.var/app/io.neovim.nvim/config/nvim ~/.config/`
 7. Clone the repo: `git clone https://github.com/t1gu1/nvchad ~/.config/nvim && nvim`
-
-### One-line Command for Flatpak Users
-```sh
-mkdir ~/.var/app/io.neovim.nvim/config/nvim && echo "alias nvim='flatpak run io.neovim.nvim'" >> ~/.bashrc && source ~/.bashrc && git clone https://github.com/t1gu1/nvchad ~/.config/nvim && nvim
-```
 
 ### Pre-requisites
 - [Nerd Font](https://www.nerdfonts.com/) as your terminal font. Avoid fonts ending with Mono.
@@ -50,7 +53,7 @@ mkdir ~/.var/app/io.neovim.nvim/config/nvim && echo "alias nvim='flatpak run io.
 - `mini.move`: Move lines or selections
 - `lspsaga`: Enhanced LSP actions and debugging
 - `project.nvim`: Quick project finder in NvDash
-- `lazygit.nvim`: Git integration inside nvim
+- `neogit.nvim`: Git integration inside nvim
 
 ### Using mini.surround
 - `sr)"`: Replace () with ""
@@ -59,6 +62,17 @@ mkdir ~/.var/app/io.neovim.nvim/config/nvim && echo "alias nvim='flatpak run io.
 - `sd]}`: Delete surrounding []
 - `saiw"`: Add "" around the word under the cursor
 - `viwsa"`: Add "" around the word under the cursor (slower)
+
+## NeoGit
+
+### Some main Shortcuts
+
+- `<leader>gg`: Open NeoGit
+- `?`: Help
+- `s`: Stage
+- `cc`: Commit
+- `Pp`: Push
+
 
 ## Terminal Integration (NvChad.term)
 <img width="1029" alt="image" src="https://github.com/t1gu1/nvchad/assets/12479055/14300c6c-51e7-48a7-9dd8-0f6a1a36f105">
@@ -87,6 +101,17 @@ Harpoon changes based on the project branch.
 - `<leader>1` to `<leader>9`: Open specific terminals (or create them)
 <img width="1611" alt="image" src="https://github.com/t1gu1/nvchad/assets/12479055/29fbd5df-d618-47bb-83ab-9a6f392140c3">
 
+## Not a Harpoon fan?
+
+Tabs/buffer are also very functional.
+
+- `Tab` go to the next buffer
+- `Shift + Tab` go to the previous buffer
+- `<leader><TAB>` move the buffer to the right
+- `<leader><S-TAB>` move the buffer to the left
+- `<leader>c<TAB>` close the buffers to the right of the active one
+- `<leader>c<S-TAB>` close the buffers to the left of the active one
+
 ## Cheat Sheet
 - `<leader>ch`: Open the Cheat Sheet
 <img width="1627" alt="image" src="https://github.com/t1gu1/nvchad/assets/12479055/18156a1c-2b61-42ae-882f-170bd8f7c40b">
@@ -97,40 +122,4 @@ Harpoon changes based on the project branch.
 ## Themes
 ![image](https://github.com/user-attachments/assets/9e7e5907-24e7-4f76-9b3b-65c21cc57732)
 
-## Lazygit Config
-```yml
-gui:
-  theme:
-    activeBorderColor:
-      - '#00ffa5'
-      - bold
-    inactiveBorderColor:
-      - '#a5adcb'
-    optionsTextColor:
-      - '#00ebd7'
-    selectedLineBgColor:
-      - '#262a3f'
-    cherryPickedCommitBgColor:
-      - '#494d64'
-    cherryPickedCommitFgColor:
-      - '#8bd5ca'
-    unstagedChangesColor:
-      - '#ed8796'
-    defaultFgColor:
-      - '#cad3f5'
-    searchingActiveBorderColor:
-      - '#eed49f' 
 
-keybinding:
-  universal:
-    quit: '<esc>'
-    quit-alt1: '<c-c>'
-    return: 'q'
-```
-
-## Linux Installation
-### If x11
-- Install `xclip`
-
-### If Wayland
-- Install `wl-copy` and `wl-paste` (Now it is under `wl-clipboard` I think)
