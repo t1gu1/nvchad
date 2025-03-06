@@ -8,13 +8,16 @@ Since the last NvChad update, you may need to delete some nvim folders:
 ## Cute Dashboard (Customised)
 <img width="1134" alt="image" src="https://github.com/t1gu1/nvchad/assets/12479055/ac0bd860-e3ad-411a-9d36-323b1250cd12">
 
-## Supported Projects
+## Supported Projects type
 - React, Javascript, Typescript
 - Astro
 - Markdown
 - Lua
 - HTML
 - CSS
+- Defold
+
+Maybe python and GO are easy to add if it is not already funcitonal
 
 ## Installation
 1. [Install Nvim](https://neovim.io/)
@@ -28,7 +31,7 @@ Since the last NvChad update, you may need to delete some nvim folders:
 #### If Wayland
 - Install `wl-clipboard`
 
-### For Flatpak Users (Not perfect instructions, but you got the idea)
+#### For Flatpak Users (Not perfect instructions, but you got the idea)
 1. Install NVIM from Flatpak
 2. Launch it once
 3. Create nvim folder: `mkdir ~/.var/app/io.neovim.nvim/config/nvim`
@@ -40,9 +43,10 @@ Since the last NvChad update, you may need to delete some nvim folders:
 ### Pre-requisites
 - [Nerd Font](https://www.nerdfonts.com/) as your terminal font. Avoid fonts ending with Mono.
 - `Ripgrep` for grep searching with Telescope (optional).
+- `nodejs`, `lua`, etc for LSPs (optional).
 - Run `:checkhealth` after opening nvim for the first time.
 
-### Windows Users
+#### Windows Users
 - Install GCC and add it to PATH.
 - Install Make (GnuWin32) and add it to PATH.
 
@@ -102,7 +106,6 @@ Harpoon changes based on the project branch.
 <img width="1611" alt="image" src="https://github.com/t1gu1/nvchad/assets/12479055/29fbd5df-d618-47bb-83ab-9a6f392140c3">
 
 ## Not a Harpoon fan?
-
 Tabs/buffer are also very functional.
 
 - `Tab` go to the next buffer
