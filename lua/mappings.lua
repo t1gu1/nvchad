@@ -122,6 +122,32 @@ map({ "n", "v" }, "<leader>la", "<cmd>Lspsaga code_action<CR>", { desc = "Lsp Co
 map({ "n", "v" }, "<leader>lh", "<cmd>Lspsaga hover_doc<CR>", { desc = "Lsp Documentation" })
 map({ "n", "v" }, "<leader>ld", "<cmd>Lspsaga show_cursor_diagnostics<CR>", { desc = "Lsp cursor diagnostics" })
 
+-- Tabs manipulation
+map(
+	{ "n" },
+	"<leader>c<tab>",
+	"<cmd>lua require('nvchad.tabufline').closeBufs_at_direction('right')<CR>",
+	{ desc = "Close Tabs to the right" }
+)
+map(
+	{ "n" },
+	"<leader>c<S-Tab>",
+	"<cmd>lua require('nvchad.tabufline').closeBufs_at_direction('left')<CR>",
+	{ desc = "Close Tabs to the left" }
+)
+map(
+	{ "n", "v" },
+	"<leader><tab>",
+	"<cmd>lua require('nvchad.tabufline').move_buf(1)<CR>",
+	{ desc = "Move Tab by 1 to the right" }
+)
+map(
+	{ "n", "v" },
+	"<leader><S-Tab>",
+	"<cmd>lua require('nvchad.tabufline').move_buf(-1)<CR>",
+	{ desc = "Move Tab by 1 to the left" }
+)
+
 -- Simply remove if you want the default live_grep from telescope
 map(
 	{ "n", "v" },
