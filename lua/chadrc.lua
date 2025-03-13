@@ -1,4 +1,3 @@
----@type ChadrcConfig
 local M = {}
 local highlights = require("highlights")
 
