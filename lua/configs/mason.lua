@@ -15,6 +15,7 @@ local options = {
 		"markdownlint",
 		"tailwindcss-language-server",
 		"gopls",
+		"vtsls",
 	}, -- not an option from mason.nvim
 
 	PATH = "skip",

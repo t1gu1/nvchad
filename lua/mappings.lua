@@ -32,6 +32,20 @@ map("n", "<ESC>", "<cmd>q<cr>", { desc = "Close buffer" })
 map("t", "<ESC>", "<cmd>q<cr>", { desc = "Close buffer" })
 map("n", "<leader>q", ":bdelete<cr>", { desc = "Buffer close" })
 
+map(
+	{ "v", "n" },
+	"<leader>cn",
+	"<cmd>lua vim.lsp.buf.rename()<cr>",
+	{ desc = "Change function or variable name everywhere" }
+)
+
+map(
+	{ "v", "n" },
+	"<leader>cf",
+	"<cmd>VtsExec rename_file<cr>",
+	{ desc = "Change function or variable name everywhere" }
+)
+
 -- Copilot
 map(
 	{ "v" },
@@ -57,7 +71,23 @@ map("n", "<C-Right>", "<cmd>wincmd l<cr>", { desc = "Split View - Go to right" }
 map("n", "<C-Up>", "<cmd>wincmd k<cr>", { desc = "Split View - Go to top" })
 map("n", "<C-Down>", "<cmd>wincmd j<cr>", { desc = "Split View - Go to bottom" })
 
-map("n", "<c-s>", '<cmd>lua require("conform").format()<CR>:w<CR>', { desc = "File Format with conform" })
+map(
+  "n",
+  "<c-s>",
+  function() 
+    require("vtsls").commands.add_missing_imports()
+    require("vtsls").commands.remove_unused()
+    require("conform").format()
+    vim.cmd("w")
+  end,
+  { desc = "File Format with conform", silent = true }
+)
+
+-- map(
+-- "n",
+--   "<c-s>",'<cmd>VtsExec add_missing_imports<CR><cmd>VtsExec remove_unused<CR><cmd>lua require("conform").format()<CR>:w<CR>',
+--   { desc = "File Format with conform", silent = true })
+
 map("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", { desc = "Toggle NvimTree" })
 map(
 	"n",
