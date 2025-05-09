@@ -25,7 +25,7 @@ M.ui = {
 	},
 	statusline = {
 		separator_style = "block",
-		order = { "cwd", "git", "%=", "lsp_msg", "%=", "lsp", "file" },
+		order = { "cwd", "git", "%=", "lsp_msg", "%=", "lsp" },
 	},
 }
 
