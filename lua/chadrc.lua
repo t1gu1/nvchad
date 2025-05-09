@@ -23,6 +23,10 @@ M.ui = {
 	tabufline = {
 		order = { "buffers", "tabs" }, -- Add "treeOffset" if you dont use nvimTreee like a popup
 	},
+	statusline = {
+		separator_style = "block",
+		order = { "cwd", "git", "%=", "lsp_msg", "%=", "lsp", "file" },
+	},
 }
 
 M.nvdash = {
