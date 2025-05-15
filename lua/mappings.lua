@@ -32,6 +32,7 @@ map("n", "<ESC>", "<cmd>q<cr>", { desc = "Close buffer" })
 map("t", "<ESC>", "<cmd>q<cr>", { desc = "Close buffer" })
 map("n", "<leader>q", ":bdelete<cr>", { desc = "Buffer close" })
 
+-- Vtstls commands
 map(
 	{ "v", "n" },
 	"<leader>cn",
@@ -39,12 +40,18 @@ map(
 	{ desc = "Change function or variable name everywhere" }
 )
 
-map(
-	{ "v", "n" },
-	"<leader>cf",
-	"<cmd>VtsExec rename_file<cr>",
-	{ desc = "Change function or variable name everywhere" }
-)
+map({ "v", "n" }, "<leader>cf", "<cmd>VtsExec rename_file<cr>", { desc = "Change file name everywhere" })
+
+map("n", "<c-f>", function()
+	require("vtsls").commands.add_missing_imports()
+	require("vtsls").commands.remove_unused()
+end, { desc = "Ajust imports", silent = true })
+
+-- Main save command
+map("n", "<c-s>", function()
+	require("conform").format()
+	vim.cmd("w")
+end, { desc = "Save file & file Format with conform", silent = true })
 
 -- Copilot
 map(
@@ -70,23 +77,6 @@ map("n", "<C-Left>", "<cmd>wincmd h<cr>", { desc = "Split View - Go to left" })
 map("n", "<C-Right>", "<cmd>wincmd l<cr>", { desc = "Split View - Go to right" })
 map("n", "<C-Up>", "<cmd>wincmd k<cr>", { desc = "Split View - Go to top" })
 map("n", "<C-Down>", "<cmd>wincmd j<cr>", { desc = "Split View - Go to bottom" })
-
-map(
-  "n",
-  "<c-s>",
-  function() 
-    require("vtsls").commands.add_missing_imports()
-    require("vtsls").commands.remove_unused()
-    require("conform").format()
-    vim.cmd("w")
-  end,
-  { desc = "File Format with conform", silent = true }
-)
-
--- map(
--- "n",
---   "<c-s>",'<cmd>VtsExec add_missing_imports<CR><cmd>VtsExec remove_unused<CR><cmd>lua require("conform").format()<CR>:w<CR>',
---   { desc = "File Format with conform", silent = true })
 
 map("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", { desc = "Toggle NvimTree" })
 map(
