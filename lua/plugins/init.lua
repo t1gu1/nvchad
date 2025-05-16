@@ -7,11 +7,13 @@ local height = 40
 return {
 	{ import = "nvchad.blink.lazyspec" },
 	{
-    "t1gu1/nvim-vtsls", event = "VeryLazy", lazy = true,
-    config = function()
+		"t1gu1/nvim-vtsls",
+		event = "VeryLazy",
+		lazy = true,
+		config = function()
 			require("vtsls").config({ silent = true })
-		end
-  },
+		end,
+	},
 	{
 		event = "VeryLazy",
 		"github/copilot.vim",
