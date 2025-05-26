@@ -1,5 +1,16 @@
 # NvChad Customised
 
+---
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+I officialy move to a new configuration based on LazyVim. 
+<https://github.com/t1gu1/lazyvim-config>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+---
+
 ## Important Note
 Since the last NvChad update, you may need to delete some nvim folders:
 - `rm -r ~/.local/share/nvim`
