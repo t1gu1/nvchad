@@ -168,6 +168,22 @@ return {
       vim.diagnostic.config { virtual_text = false } -- Disable default virtual text
     end,
   },
+  {
+    "echasnovski/mini.cursorword",
+    version = "*",
+    event = "VeryLazy",
+    config = function()
+      require("mini.cursorword").setup()
+    end,
+  },
+  {
+    "echasnovski/mini.surround",
+    version = "*",
+    event = "VeryLazy",
+    config = function()
+      require("mini.surround").setup { n_lines = 260 }
+    end,
+  },
 
   -- Package version
   {

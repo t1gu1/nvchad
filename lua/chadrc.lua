@@ -61,9 +61,9 @@ M.nvdash = {
   },
 
   buttons = {
-    { txt = "  Projects", cmd = "Telescope projects" },
-    { txt = "  Themes  ", cmd = ":lua require('nvchad.themes').open()" },
-    { txt = "  Mappings", cmd = "NvCheatsheet" },
+    { txt = "    Projects", cmd = "Telescope projects" },
+    { txt = "    Themes  ", cmd = ":lua require('nvchad.themes').open()" },
+    { txt = "    Mappings", cmd = "NvCheatsheet" },
   },
 }
 
