@@ -67,17 +67,6 @@ Maybe python and GO are easy to add if it is not already funcitonal
 - `saiw"`: Add "" around the word under the cursor
 - `viwsa"`: Add "" around the word under the cursor (slower)
 
-## NeoGit
-
-### Some main Shortcuts
-
-- `<leader>gg`: Open NeoGit
-- `?`: Help
-- `s`: Stage
-- `cc`: Commit
-- `Pp`: Push
-
-
 ## Terminal Integration (NvChad.term)
 <img width="1029" alt="image" src="https://github.com/t1gu1/nvchad/assets/12479055/14300c6c-51e7-48a7-9dd8-0f6a1a36f105">
 
@@ -98,14 +87,7 @@ Appears when you press `:` or `/`, removing the bottom screen space.
 <img width="997" alt="image" src="https://github.com/t1gu1/nvchad/assets/12479055/5046ccf0-a3ee-4e3f-a493-7dfa26e57782">
 <img width="997" alt="image" src="https://github.com/t1gu1/nvchad/assets/12479055/201dfb98-4b2f-4a4b-af47-6b11c2283007">
 
-## Navigate Fast with Harpoon 2 (Added)
-Harpoon changes based on the project branch.
-- `<leader>a`: Add file in Harpoon
-- `<leader>E`: Show Harpoon explorer (CAP E)
-- `<leader>1` to `<leader>9`: Open specific terminals (or create them)
-<img width="1611" alt="image" src="https://github.com/t1gu1/nvchad/assets/12479055/29fbd5df-d618-47bb-83ab-9a6f392140c3">
-
-## Not a Harpoon fan?
+## Tabs & Buffers
 Tabs/buffer are also very functional.
 
 - `Tab` go to the next buffer
@@ -114,6 +96,8 @@ Tabs/buffer are also very functional.
 - `<leader><S-TAB>` move the buffer to the left
 - `<leader>c<TAB>` close the buffers to the right of the active one
 - `<leader>c<S-TAB>` close the buffers to the left of the active one
+- `<leader>q<TAB>` close the current buffer
+- `<leader>Q<TAB>` close other buffers except the current one
 
 ## Cheat Sheet
 - `<leader>ch`: Open the Cheat Sheet
