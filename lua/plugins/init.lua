@@ -1,8 +1,8 @@
 -- User for NvimTree
 local gwidth = vim.api.nvim_list_uis()[1].width
 local gheight = vim.api.nvim_list_uis()[1].height
-local width = 60
-local height = 40
+local width = 70
+local height = 45
 
 return {
   {
