@@ -19,6 +19,7 @@ map(
   "<cmd>lua require('telescope.builtin').live_grep({ additional_args = { '--fixed-strings' }})<CR>",
   { desc = "Search a string" }
 )
+map("n", "<leader>d/", "<cmd>noh<cr>", { desc = "Turn off highlighting until the next search" })
 
 -- Explorer (Nvim Tree)
 map("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", { desc = "Toggle NvimTree" })
@@ -30,8 +31,8 @@ map(
 )
 
 -- Terminal
-map({ "n", "t" }, "<ESC>", "<cmd>close<cr>", { desc = "Close buffer" })
-map({ "n" }, "t", "<cmd>Telescope terms<CR>", { desc = "Terminal List" })
+map({ "n" }, "<ESC>", "<cmd>close<cr>", { desc = "Close buffer" })
+map({ "t" }, "<ESC><ESC>", "<cmd>close<cr>", { desc = "Double ESC to close terminal buffer" })
 
 local lastTermIdUsed = 1
 
@@ -52,9 +53,26 @@ for id = 1, 9 do
   end, { desc = "Terminal Toggle to " .. id })
 end
 
+-- Gemini Terminal
+map({ "n" }, "<leader>aa", function()
+  require("nvchad.term").toggle {
+    pos = "float",
+    id = "gemini",
+    cmd = "gemini",
+  }
+end, { desc = "Gemini Toggle Floating" })
+
+map({ "n" }, "<leader>gg", function()
+  require("nvchad.term").toggle {
+    pos = "float",
+    id = "lazygit",
+    cmd = "lazygit",
+  }
+end, { desc = "Lazygit Toggle Floating" })
+
 -- Code actions
 map({ "n", "i", "v" }, "<C-a>", "<ESC>ggVG", { desc = "Select ALL" })
-map({ "n", "v" }, "<leader>la", "<cmd>Lspsaga code_action<CR>", { desc = "Lsp Code action" })
+map({ "n", "v" }, "<leader>ca", "<cmd>Lspsaga code_action<CR>", { desc = "Lsp Code action" })
 map("v", "d", '"_d', { desc = "Delete without remove yank" })
 map("v", "D", '"_D', { desc = "Delete without remove yank" })
 map("v", "p", '"_dP', { desc = "Paste without remove yank" })
