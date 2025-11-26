@@ -72,7 +72,10 @@ end, { desc = "Lazygit Toggle Floating" })
 
 -- Code actions
 map({ "n", "i", "v" }, "<C-a>", "<ESC>ggVG", { desc = "Select ALL" })
-map({ "n", "v" }, "<leader>ca", "<cmd>Lspsaga code_action<CR>", { desc = "Lsp Code action" })
+map({ "n", "v" }, "<leader>ca", function()
+  require("fastaction").code_action()
+end, { desc = "Lsp Code action" })
+
 map("v", "d", '"_d', { desc = "Delete without remove yank" })
 map("v", "D", '"_D', { desc = "Delete without remove yank" })
 map("v", "p", '"_dP', { desc = "Paste without remove yank" })

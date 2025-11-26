@@ -1,14 +1,22 @@
 -- User for NvimTree
-local gwidth = vim.api.nvim_list_uis()[1].width
-local gheight = vim.api.nvim_list_uis()[1].height
-local width = 70
-local height = 45
+local gwidth, gheight, width, height
+
+pcall(function()
+  gwidth = vim.api.nvim_list_uis()[1].width
+  gheight = vim.api.nvim_list_uis()[1].height
+  width = 70
+  height = 45
+end)
 
 return {
   {
     "stevearc/conform.nvim",
     -- event = 'BufWritePre', -- uncomment for format on save
     opts = require "configs.conform",
+  },
+  {
+    "Chaitanyabsprip/fastaction.nvim",
+    opts = {},
   },
 
   -- These are some examples, uncomment them if you want to see them work!
