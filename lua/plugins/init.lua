@@ -259,12 +259,8 @@ return {
   {
     "S1M0N38/love2d.nvim",
     event = "VeryLazy",
-    version = "2.*",
-    opts = {
-      debug_window_opts = {
-        split = "below",
-      },
-    },
+    branch = "dev",
+    opts = {},
     keys = {
       { "<leader>l",  ft = "lua",          desc = "LÖVE" },
       { "<leader>lr", "<cmd>LoveRun<cr>",  ft = "lua",   desc = "Run LÖVE" },

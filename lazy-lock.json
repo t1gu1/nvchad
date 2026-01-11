@@ -13,7 +13,7 @@
   "indent-blankline.nvim": { "branch": "master", "commit": "005b56001b2cb30bfa61b7986bc50657816ba4ba" },
   "keys.nvim": { "branch": "main", "commit": "572490e8efac66a6008e016dbe82ad49ebfb3250" },
   "lazy.nvim": { "branch": "main", "commit": "306a05526ada86a7b30af95c5cc81ffba93fef97" },
-  "love2d.nvim": { "branch": "main", "commit": "25715394680590f56aab90390d430cab0dc46808" },
+  "love2d.nvim": { "branch": "dev", "commit": "f093510eeacec603f60fadaa7f84430acaee34d4" },
   "markdown-todo.nvim": { "branch": "master", "commit": "d29fa4fa648daf5db5aade75cb350064788e63a1" },
   "mason.nvim": { "branch": "main", "commit": "44d1e90e1f66e077268191e3ee9d2ac97cc18e65" },
   "menu": { "branch": "main", "commit": "7a0a4a2896b715c066cfbe320bdc048091874cc6" },
