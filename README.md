@@ -46,6 +46,21 @@ Maybe python and GO are easy to add if it is not already funcitonal
 - `nodejs`, `lua`, etc for LSPs (optional).
 - Run `:checkhealth` after opening nvim for the first time.
 
+### Lazygit
+
+Simply install lazygit in your system
+
+For auto commit message using AI here an example of lazygit config
+
+```
+customCommands:
+  - key: "<c-C>"
+    context: "global"
+    description: "Auto commit staged files with an auto message"
+    command: "git commit -m \"$(git diff --staged | claude -p 'Based on the following git diff, generate only a one line commit message')\""
+    loadingText: "Analyse staged files..."
+```
+
 #### Windows Users
 - Install GCC and add it to PATH.
 - Install Make (GnuWin32) and add it to PATH.
