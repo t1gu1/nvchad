@@ -54,13 +54,14 @@ for id = 1, 9 do
 end
 
 -- Gemini Terminal
-map({ "n" }, "<leader>aa", function()
-  require("nvchad.term").toggle {
-    pos = "float",
-    id = "gemini",
-    cmd = "gemini",
-  }
-end, { desc = "Gemini Toggle Floating" })
+-- map({ "n" }, "<leader>aa", function()
+--   require("nvchad.term").toggle {
+--     pos = "float",
+--     id = "gemini",
+--     cmd = "gemini",
+--   }
+-- end, { desc = "Gemini Toggle Floating" })
+map({ "n" }, "<leader>aa", "<cmd>ClaudeCode<CR>", { desc = "Toggle Claude Code" })
 
 map({ "n" }, "<leader>gg", function()
   require("nvchad.term").toggle {
