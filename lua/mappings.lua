@@ -116,7 +116,7 @@ map(
   { "n" },
   "<leader>q<tab>",
   "<cmd>lua require('nvchad.tabufline').close_buffer()<CR>",
-  { desc = "Close Tabs to the right" }
+  { desc = "Close current tab" }
 )
 map(
   { "n" },
