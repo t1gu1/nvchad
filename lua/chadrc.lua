@@ -10,6 +10,7 @@ M.base46 = {
   transparency = true,
 
   hl_override = {
+    Visual = { bg = "#191010" },
     Comment = { italic = true },
     ["@comment"] = { italic = true },
     NvDashAscii = { bg = "NONE", fg = "yellow" },
