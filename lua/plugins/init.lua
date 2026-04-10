@@ -85,10 +85,10 @@ return {
     config = function()
       require("noice").setup {
         presets = {
-          bottom_search = false, -- use a classic bottom cmdline for search
-          command_palette = true, -- position the cmdline and popupmenu together
+          bottom_search = false,        -- use a classic bottom cmdline for search
+          command_palette = true,       -- position the cmdline and popupmenu together
           long_message_to_split = true, -- long messages will be sent to a split
-          lsp_doc_border = false, -- add a border to hover docs and signature help
+          lsp_doc_border = false,       -- add a border to hover docs and signature help
         },
         lsp = {
           signature = {
@@ -124,7 +124,7 @@ return {
 
   -- Dashboard
   {
-    "jay-babu/project.nvim",
+    "jiazhoulvke/project.nvim",
     main = "project_nvim",
     event = "VeryLazy",
     opts = { ignore_lsp = { "lua_ls" } },
@@ -132,7 +132,7 @@ return {
   {
     "nvim-telescope/telescope.nvim",
     optional = true,
-    dependencies = { "jay-babu/project.nvim" },
+    dependencies = { "jiazhoulvke/project.nvim" },
     opts = function(_, opts)
       opts.patterns = { ".git" }
       require("telescope").load_extension "projects"
@@ -210,9 +210,9 @@ return {
             invalid = "|  ", -- Icon for invalid dependencies
           },
         },
-        notifications = true, -- Whether to display notifications when running commands
-        autostart = true, -- Whether to autostart when `package.json` is opened
-        hide_up_to_date = false, -- It hides up to date versions when displaying virtual text
+        notifications = true,           -- Whether to display notifications when running commands
+        autostart = true,               -- Whether to autostart when `package.json` is opened
+        hide_up_to_date = false,        -- It hides up to date versions when displaying virtual text
         hide_unstable_versions = false, -- It hides unstable versions from version list e.g next-11.1.3-canary3
         -- Can be `npm`, `yarn`, or `pnpm`. Used for `delete`, `install` etc...
         -- The plugin will try to auto-detect the package manager based on
@@ -250,9 +250,9 @@ return {
       },
     },
     keys = {
-      { "<leader>l", ft = "lua", desc = "LÖVE" },
-      { "<leader>lr", "<cmd>LoveRun<cr>", ft = "lua", desc = "Run LÖVE" },
-      { "<leader>lq", "<cmd>LoveStop<cr>", ft = "lua", desc = "Stop LÖVE" },
+      { "<leader>l",  ft = "lua",          desc = "LÖVE" },
+      { "<leader>lr", "<cmd>LoveRun<cr>",  ft = "lua",   desc = "Run LÖVE" },
+      { "<leader>lq", "<cmd>LoveStop<cr>", ft = "lua",   desc = "Stop LÖVE" },
     },
   },
 
@@ -267,10 +267,10 @@ return {
         window = {
           position = "float",
           float = {
-            width = "90%", -- Take up 90% of the editor width
-            height = "90%", -- Take up 90% of the editor height
-            row = "center", -- Center vertically
-            col = "center", -- Center horizontally
+            width = "90%",     -- Take up 90% of the editor width
+            height = "90%",    -- Take up 90% of the editor height
+            row = "center",    -- Center vertically
+            col = "center",    -- Center horizontally
             relative = "editor",
             border = "double", -- Use double border style
           },
