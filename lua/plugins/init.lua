@@ -44,20 +44,6 @@ return {
     opts = require "configs.mason",
   },
 
-  {
-    "rmagatti/auto-session",
-    lazy = false,
-
-    ---enables autocomplete for opts
-    ---@module "auto-session"
-    opts = {
-      auto_restore = true,
-      enabled = true,
-      git_use_branch_name = true,
-      suppressed_dirs = { "~/", "~/Projects", "~/Downloads", "/" },
-    },
-  },
-
   -- Visual
   { "tamton-aquib/keys.nvim" },
   {
