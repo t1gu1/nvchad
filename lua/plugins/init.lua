@@ -1,11 +1,10 @@
--- User for NvimTree
-local gwidth, gheight, width, height
+-- Used for NvimTree float positioning
+local width, height = 70, 45
+local gwidth, gheight = 0, 0
 
 pcall(function()
   gwidth = vim.api.nvim_list_uis()[1].width
   gheight = vim.api.nvim_list_uis()[1].height
-  width = 70
-  height = 45
 end)
 
 return {

@@ -4,15 +4,14 @@ local map = vim.keymap.set
 
 -- Project
 map({ "n", "v" }, "<leader>qq", "<cmd>quit<CR>", { desc = "Quit the project" })
-map("n", "<leader>sr", "<cmd>SessionRestore<cr>", { desc = "Buffer close" })
+map("n", "<leader>sr", "<cmd>SessionRestore<cr>", { desc = "Session restore" })
 map("n", ";", ":", { desc = "CMD enter command mode" })
 
 -- Insert mode
 map("i", "jk", "<ESC>", { desc = "Escape insert mode" })
-map("i", "jk", "<ESC>")
 
 -- Search
-map("n", "<leader>f<leader>", "<cmd>Telescope resume<cr>", { desc = "Buffer close" })
+map("n", "<leader>f<leader>", "<cmd>Telescope resume<cr>", { desc = "Resume last Telescope search" })
 map(
   { "n", "v" },
   "<leader>fw",
@@ -72,7 +71,7 @@ map({ "n" }, "<leader>ac", function()
     id = "copilot",
     cmd = "copilot",
   }
-end, { desc = "Gemini Toggle Floating" })
+end, { desc = "Copilot Toggle Floating" })
 
 map({ "n" }, "<leader>gg", function()
   require("nvchad.term").toggle {
@@ -97,24 +96,25 @@ map("n", "<c-s>", function()
   vim.cmd "w"
 end, { desc = "Save file & file Format with conform", silent = true })
 
--- Code move a line
-map("n", "<S-Up>", '<cmd>lua MiniMove.move_line("up")<cr>', { desc = "Move - line up" })
-map("n", "<S-Down>", '<cmd>lua MiniMove.move_line("down")<cr>', { desc = "Move - line down" })
-map("n", "<S-Left>", '<cmd>lua MiniMove.move_line("left")<cr>', { desc = "Move - line left" })
-map("n", "<S-Right>", '<cmd>lua MiniMove.move_line("right")<cr>', { desc = "Move - line right" })
-map("n", "<S-k>", '<cmd>lua MiniMove.move_line("up")<cr>', { desc = "Move - line up" })
-map("n", "<S-j>", '<cmd>lua MiniMove.move_line("down")<cr>', { desc = "Move - line down" })
-map("n", "<S-h>", '<cmd>lua MiniMove.move_line("left")<cr>', { desc = "Move - line left" })
-map("n", "<S-l>", '<cmd>lua MiniMove.move_line("right")<cr>', { desc = "Move - line right" })
--- Code move bloc
-map("v", "<S-Up>", '<cmd>lua MiniMove.move_selection("up")<cr>', { desc = "Move - line up" })
-map("v", "<S-Down>", '<cmd>lua MiniMove.move_selection("down")<cr>', { desc = "Move - line down" })
-map("v", "<S-Left>", '<cmd>lua MiniMove.move_selection("left")<cr>', { desc = "Move - line left" })
-map("v", "<S-Right>", '<cmd>lua MiniMove.move_selection("right")<cr>', { desc = "Move - line right" })
-map("v", "<S-k>", '<cmd>lua MiniMove.move_selection("up")<cr>', { desc = "Move - line up" })
-map("v", "<S-j>", '<cmd>lua MiniMove.move_selection("down")<cr>', { desc = "Move - line down" })
-map("v", "<S-h>", '<cmd>lua MiniMove.move_selection("left")<cr>', { desc = "Move - line left" })
-map("v", "<S-l>", '<cmd>lua MiniMove.move_selection("right")<cr>', { desc = "Move - line right" })
+-- Code move a line (normal) / selection (visual)
+local move_dirs = {
+  { keys = { "<S-Up>", "<S-k>" }, dir = "up" },
+  { keys = { "<S-Down>", "<S-j>" }, dir = "down" },
+  { keys = { "<S-Left>", "<S-h>" }, dir = "left" },
+  { keys = { "<S-Right>", "<S-l>" }, dir = "right" },
+}
+
+for _, m in ipairs(move_dirs) do
+  for _, key in ipairs(m.keys) do
+    map("n", key, string.format('<cmd>lua MiniMove.move_line("%s")<cr>', m.dir), { desc = "Move line " .. m.dir })
+    map(
+      "v",
+      key,
+      string.format('<cmd>lua MiniMove.move_selection("%s")<cr>', m.dir),
+      { desc = "Move selection " .. m.dir }
+    )
+  end
+end
 
 -- Tabs manipulation
 map(
