@@ -56,10 +56,10 @@ end
 map({ "n" }, "<leader>ag", function()
   require("nvchad.term").toggle {
     pos = "float",
-    id = "gemini",
-    cmd = "gemini",
+    id = "agy",
+    cmd = "agy",
   }
-end, { desc = "Gemini Toggle Floating" })
+end, { desc = "Antigravity Toggle Floating" })
 
 -- Claude
 map({ "n" }, "<leader>aa", "<cmd>ClaudeCode<CR>", { desc = "Toggle Claude Code" })
@@ -98,9 +98,9 @@ end, { desc = "Save file & file Format with conform", silent = true })
 
 -- Code move a line (normal) / selection (visual)
 local move_dirs = {
-  { keys = { "<S-Up>", "<S-k>" }, dir = "up" },
-  { keys = { "<S-Down>", "<S-j>" }, dir = "down" },
-  { keys = { "<S-Left>", "<S-h>" }, dir = "left" },
+  { keys = { "<S-Up>", "<S-k>" },    dir = "up" },
+  { keys = { "<S-Down>", "<S-j>" },  dir = "down" },
+  { keys = { "<S-Left>", "<S-h>" },  dir = "left" },
   { keys = { "<S-Right>", "<S-l>" }, dir = "right" },
 }
 
