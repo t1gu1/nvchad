@@ -69,7 +69,7 @@ map({ "n" }, "<leader>ac", function()
   require("nvchad.term").toggle {
     pos = "float",
     id = "copilot",
-    cmd = "copilot",
+    cmd = "copilot --allow-all --deny-tool='shell(git push*)' --deny-tool='shell(git commit*)' --deny-tool='shell(git add*)'",
   }
 end, { desc = "Copilot Toggle Floating" })
 
@@ -98,9 +98,9 @@ end, { desc = "Save file & file Format with conform", silent = true })
 
 -- Code move a line (normal) / selection (visual)
 local move_dirs = {
-  { keys = { "<S-Up>", "<S-k>" },    dir = "up" },
-  { keys = { "<S-Down>", "<S-j>" },  dir = "down" },
-  { keys = { "<S-Left>", "<S-h>" },  dir = "left" },
+  { keys = { "<S-Up>", "<S-k>" }, dir = "up" },
+  { keys = { "<S-Down>", "<S-j>" }, dir = "down" },
+  { keys = { "<S-Left>", "<S-h>" }, dir = "left" },
   { keys = { "<S-Right>", "<S-l>" }, dir = "right" },
 }
 
