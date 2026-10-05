@@ -223,21 +223,6 @@ return {
       package_info.get_status()
     end,
   },
-  -- Endpoints list view
-  {
-    "zerochae/endpoint.nvim",
-    dependencies = {
-      "nvim-telescope/telescope.nvim",
-    },
-    cmd = { "Endpoint", "EndpointRefresh" },
-    config = function()
-      require("endpoint").setup {
-        picker = {
-          type = "telescope", -- "telescope", "vim_ui_select", "snacks"
-        },
-      }
-    end,
-  },
 
   {
     "S1M0N38/love2d.nvim",
